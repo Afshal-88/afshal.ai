@@ -7,10 +7,11 @@ import path from "node:path";
  * Good for the launch volume; swap for a database when records pass a few thousand.
  * Without a token (local development) it falls back to ./.data on disk.
  */
-const TOKEN = process.env.BLOB_READ_WRITE_TOKEN;
+// Either a classic read-write token, or a connected store using OIDC (BLOB_STORE_ID + VERCEL_OIDC_TOKEN).
+const HAS_BLOB = !!(process.env.BLOB_READ_WRITE_TOKEN || process.env.BLOB_STORE_ID);
 const DEV_DIR = path.join(process.cwd(), ".data");
-const dev = !TOKEN;
-if (dev && process.env.VERCEL) throw new Error("BLOB_READ_WRITE_TOKEN is missing");
+const dev = !HAS_BLOB;
+if (dev && process.env.VERCEL) throw new Error("Blob storage is not connected (BLOB_READ_WRITE_TOKEN or BLOB_STORE_ID missing)");
 
 const safe = (p: string) => { if (!/^[a-z0-9/_.-]+$/i.test(p) || p.includes("..")) throw new Error("bad path"); return p; };
 

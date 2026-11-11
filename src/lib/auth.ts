@@ -8,8 +8,11 @@ const scrypt = promisify(_scrypt) as (pw: string, salt: Buffer, len: number) => 
 export const ADMIN_EMAIL = "afshalamir8@gmail.com";
 const COOKIE = "sid";
 const DAYS = 30;
-// Session signing key is derived from the storage token, so no extra secret has to be managed.
-const SECRET = createHash("sha256").update((process.env.BLOB_READ_WRITE_TOKEN || "local-dev-only") + ":session:v1").digest();
+// Session signing key: SESSION_SECRET if set, else derived from a classic storage token.
+// On Vercel one of them must exist, so cookies are never signed with a guessable key.
+const SECRET_SRC = process.env.SESSION_SECRET || process.env.BLOB_READ_WRITE_TOKEN;
+if (!SECRET_SRC && process.env.VERCEL) throw new Error("SESSION_SECRET is missing");
+const SECRET = createHash("sha256").update((SECRET_SRC || "local-dev-only") + ":session:v1").digest();
 
 export type Member = { name: string; email: string; whatsapp: string; consent: boolean; pass: string; role: "member" | "admin"; createdAt: string; door?: string };
 export type SessionUser = { name: string; email: string; role: "member" | "admin"; pro: boolean };
