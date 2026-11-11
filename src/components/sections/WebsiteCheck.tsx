@@ -325,7 +325,7 @@ export default function WebsiteCheck() {
             <AnimatePresence mode="wait">
               <motion.div
                 key={mood}
-                className="absolute -left-4 top-2 max-w-[200px] rounded-2xl rounded-bl-sm border border-white/10 bg-[#11131c]/90 px-4 py-3 text-sm shadow-xl backdrop-blur md:-left-16"
+                className="absolute -left-4 top-2 max-w-[200px] rounded-2xl rounded-bl-sm border border-white/10 bg-[#11131c] px-4 py-3 text-sm shadow-xl md:-left-16"
                 initial={{ opacity: 0, y: 8, scale: 0.96 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: -6 }} transition={{ duration: 0.35, ease: EASE }}
               >
                 {mood === "scan" ? "Scanning your site…" : mood === "happy" ? "Looking great!" : mood === "worried" ? (state === "error" ? "Hmm, I couldn't finish." : "Found a few things to fix.") : "Give me a website to check."}

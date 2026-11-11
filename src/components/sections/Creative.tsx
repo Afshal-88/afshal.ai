@@ -60,7 +60,7 @@ export default function Creative() {
               className={`group relative overflow-hidden rounded-[22px] border border-line bg-white text-left ${items.length === 1 || (items.length % 2 === 1 && i === 0) ? "md:col-span-2" : ""}`}
             >
               <img src={w.src} alt={w.alt} loading="lazy" decoding="async" className="aspect-[16/9] w-full object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(.23,1,.32,1)] group-hover:scale-[1.04]" />
-              <span className="absolute bottom-3 left-3 rounded-full bg-black/70 px-3 py-1.5 text-xs text-white backdrop-blur">{w.title}</span>
+              <span className="absolute bottom-3 left-3 rounded-full bg-black/80 px-3 py-1.5 text-xs text-white">{w.title}</span>
             </motion.button>
           ))}
         </AnimatePresence>
@@ -72,7 +72,7 @@ export default function Creative() {
             role="dialog"
             aria-modal="true"
             aria-label={open.title}
-            className="fixed inset-0 z-[70] flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm md:p-10"
+            className="fixed inset-0 z-[70] flex items-center justify-center bg-black/90 p-4 md:p-10"
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
             onClick={() => setOpen(null)}
           >

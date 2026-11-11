@@ -94,7 +94,7 @@ export function Collage() {
       </div>
       <AnimatePresence>
         {open !== null && (
-          <motion.div role="dialog" aria-modal="true" aria-label={collage[open].alt} className="fixed inset-0 z-[70] flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setOpen(null)}>
+          <motion.div role="dialog" aria-modal="true" aria-label={collage[open].alt} className="fixed inset-0 z-[70] flex items-center justify-center bg-black/90 p-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setOpen(null)}>
             <motion.img key={open} src={collage[open].src} alt={collage[open].alt} className="max-h-[86svh] max-w-full rounded-2xl object-contain" initial={{ scale: 0.92, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }} />
             <div className="absolute inset-x-0 bottom-5 flex justify-center gap-3" onClick={(e) => e.stopPropagation()}>
               <button onClick={() => setOpen((o) => (o! - 1 + collage.length) % collage.length)} className="rounded-full border border-white/20 bg-black/50 px-4 py-2 text-sm">← Prev</button>

@@ -27,7 +27,7 @@ export function ContactProvider({ children }: { children: ReactNode }) {
       <AnimatePresence>
         {topic !== null && (
           <motion.div
-            className="fixed inset-0 z-[75] flex items-end justify-center bg-black/70 p-0 backdrop-blur-sm md:items-center md:p-6"
+            className="fixed inset-0 z-[75] flex items-end justify-center bg-black/80 p-0 md:items-center md:p-6"
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
             onClick={close}
           >

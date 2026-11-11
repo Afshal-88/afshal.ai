@@ -35,7 +35,7 @@ export default function WhatsAppFloat() {
         aria-label="Chat with Afshal on WhatsApp (0342 0757848)"
         onPointerEnter={() => setTip(true)}
         onPointerLeave={() => setTip(false)}
-        className="relative grid h-14 w-14 place-items-center rounded-full shadow-[0_12px_32px_rgba(37,211,102,.45)] md:h-16 md:w-16"
+        className="relative grid h-14 w-14 place-items-center rounded-full shadow-[0_8px_24px_rgba(0,0,0,.45)] md:h-16 md:w-16"
         style={{ background: wa.hex }}
         initial={{ scale: 0, rotate: -30 }}
         animate={{ scale: 1, rotate: 0 }}

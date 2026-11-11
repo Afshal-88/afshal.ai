@@ -134,12 +134,12 @@ export default function StairsGame() {
             initial={false}
             transition={reduce ? { duration: 0 } : { left: { duration: 0.55, ease: [0.45, 0, 0.55, 1] }, bottom: { type: "spring", stiffness: 260, damping: 14 } }}
           >
-            <motion.img src="/brand/goat-white.webp" width={160} height={174} alt="" className="h-12 w-auto drop-shadow-[0_6px_18px_rgba(255,212,0,.8)] sm:h-16"
+            <motion.img src="/brand/goat-white.webp" width={160} height={174} alt="" className="h-12 w-auto sm:h-16"
               key={pos} initial={reduce ? false : { y: -14, scaleY: 0.9 }} animate={{ y: 0, scaleY: 1 }} transition={{ type: "spring", stiffness: 500, damping: 12 }} />
           </motion.div>
 
           {/* summit flag */}
-          <div className="absolute right-[3%] top-[3%] flex items-center gap-2 rounded-full border border-white/10 bg-black/40 px-3 py-1.5 text-[11px] backdrop-blur">
+          <div className="absolute right-[3%] top-[3%] flex items-center gap-2 rounded-full border border-white/10 bg-black/70 px-3 py-1.5 text-[11px]">
             <Icon name="Trophy" className="h-3.5 w-3.5 text-[#ffd400]" /> Summit: complete marketing
           </div>
           {done && <Confetti key={celebrate} />}

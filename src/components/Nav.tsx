@@ -13,7 +13,7 @@ function AccountLink() {
   const me = useMe();
   if (me === undefined) return <span className="h-11 w-20" />;
   return (
-    <a href={me ? (me.role === "admin" ? "/admin" : "/account") : "/account"} className="flex h-11 items-center whitespace-nowrap rounded-full border border-white/15 bg-bg/40 px-4 text-sm backdrop-blur-md">
+    <a href={me ? (me.role === "admin" ? "/admin" : "/account") : "/account"} className="flex h-11 items-center whitespace-nowrap rounded-full border border-white/15 bg-bg px-4 text-sm">
       {me ? (me.role === "admin" ? "Admin" : me.name.split(" ")[0].slice(0, 12)) : "Sign in"}
     </a>
   );
@@ -66,7 +66,7 @@ export default function Nav() {
         animate={{ y: hidden ? "-110%" : "0%" }}
         transition={{ duration: 0.45, ease: [0.23, 1, 0.32, 1] }}
       >
-        <div className={`mx-auto flex items-center justify-between px-5 py-4 transition-[background-color,backdrop-filter] duration-300 md:px-10 ${scrolled && !open ? "bg-bg/60 backdrop-blur-xl" : ""}`}>
+        <div className={`mx-auto flex items-center justify-between px-5 py-4 transition-[background-color] duration-300 md:px-10 ${scrolled && !open ? "bg-bg/95" : ""}`}>
           <Link href="/" className="group flex items-center gap-3" aria-label={`${profile.name} — home`}>
             <Logo className="h-9 w-auto transition-opacity duration-300 group-hover:opacity-80 md:h-10" />
           </Link>
@@ -84,7 +84,7 @@ export default function Nav() {
                 onClick={() => setOpen((o) => !o)}
                 aria-expanded={open}
                 aria-controls="site-menu"
-                className="relative z-[60] flex h-11 items-center gap-3 rounded-full border border-white/15 bg-bg/40 px-5 text-sm backdrop-blur-md transition-transform duration-150 active:scale-[0.97]"
+                className="relative z-[60] flex h-11 items-center gap-3 rounded-full border border-white/15 bg-bg px-5 text-sm transition-transform duration-150 active:scale-[0.97]"
               >
                 <span>{open ? "Close" : "Menu"}</span>
                 <span className="relative block h-2.5 w-4">

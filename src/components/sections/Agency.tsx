@@ -71,7 +71,7 @@ function InfluencerCard({ f, i }: { f: (typeof influencers)[number]; i: number }
       </article>
       <AnimatePresence>
         {playing && f.video && (
-          <motion.div role="dialog" aria-modal="true" aria-label={f.videoLabel} className="fixed inset-0 z-[70] flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setPlaying(false)}>
+          <motion.div role="dialog" aria-modal="true" aria-label={f.videoLabel} className="fixed inset-0 z-[70] flex items-center justify-center bg-black/90 p-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setPlaying(false)}>
             <motion.video src={f.video} poster={f.poster} autoPlay controls playsInline className="max-h-[86svh] max-w-full rounded-2xl" initial={{ scale: 0.92 }} animate={{ scale: 1 }} onClick={(e) => e.stopPropagation()} />
             <button onClick={() => setPlaying(false)} autoFocus className="absolute right-5 top-5 rounded-full border border-white/20 bg-black/50 px-4 py-2 text-sm">Close</button>
           </motion.div>
@@ -96,7 +96,7 @@ function MeetingReel() {
           <figure key={v.name} className={`w-[46%] max-w-[220px] ${i % 2 ? "md:translate-y-8" : ""}`}>
             <div className="relative overflow-hidden rounded-[30px] border-[5px] border-[#1c1c22] bg-black shadow-[0_30px_80px_rgba(0,0,0,.6)]">
               <LazyVideo src={v.video} poster={v.poster} className="aspect-[9/16] w-full object-cover" />
-              <span className="absolute left-2.5 top-2.5 flex items-center gap-1.5 rounded-full bg-black/60 px-2.5 py-1 text-[11px] backdrop-blur"><span className="h-1.5 w-1.5 animate-pulse rounded-full bg-red-500" />Behind the scenes</span>
+              <span className="absolute left-2.5 top-2.5 flex items-center gap-1.5 rounded-full bg-black/75 px-2.5 py-1 text-[11px]">Behind the scenes</span>
             </div>
             <figcaption className="mt-3 text-center text-sm text-mute">Meeting with <span className="text-ink">{v.name}</span></figcaption>
           </figure>
