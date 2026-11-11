@@ -10,9 +10,8 @@ export const profile = {
   years: "5+",
   headline: ["Where technology", "meets creativity.", "And strategy turns", "into execution."],
   email: "afshalamir8@gmail.com",
-  // TODO(Afshal): add your WhatsApp number in international format, digits only (e.g. 923001234567)
-  whatsapp: "",
-  site: "https://afshal-portfolio.vercel.app",
+  whatsapp: "923420757848",
+  site: "https://afshal-ai.vercel.app",
 };
 
 export type Social = { key: string; label: string; url: string };
