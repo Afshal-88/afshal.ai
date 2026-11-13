@@ -126,6 +126,7 @@ export default function Hub() {
             <div className="md:col-span-8">
               <h2 className="display text-4xl md:text-5xl">Want it done for you?</h2>
               <p className="mt-4 max-w-2xl text-lg">My agency, Star X Marketing, builds websites, runs social media and ads, and sets up AI chatbots and automations for businesses.</p>
+              <p className="mt-3 max-w-2xl text-lg">For AI automation, we build and run it with you for two months, train your team, then hand it over. <Link href="/ai-solutions" className="font-semibold underline underline-offset-4">See how it works</Link>.</p>
             </div>
             <div className="flex flex-wrap items-end gap-3 md:col-span-4 md:justify-end">
               <ContactButton className="inline-flex items-center gap-2 rounded-full bg-[#111] px-6 py-4 text-sm font-semibold text-white transition-transform active:scale-[0.97]">Start a project <Icon name="ArrowRight" className="h-4 w-4" /></ContactButton>

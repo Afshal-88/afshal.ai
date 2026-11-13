@@ -23,6 +23,7 @@ const links = [
   { href: "/#create", label: "AI content generator" },
   { href: "/prompts", label: "Prompt library" },
   { href: "/tools", label: "AI tools" },
+  { href: "/ai-solutions", label: "AI solutions for business" },
   { href: "/pricing", label: "Pricing" },
   { href: "/#website-check", label: "Free website check" },
   { href: "/portfolio", label: "Portfolio" },

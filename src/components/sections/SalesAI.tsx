@@ -268,6 +268,7 @@ export function Automation() {
         ))}
       </div>
       <div className="relative mt-6"><WorkflowCanvas flow={flow} mobile={mobile} /></div>
+      <p className="relative mt-6 text-lg text-mute">Want this for your business? <a href="/ai-solutions" className="text-accent underline underline-offset-4">Get a free AI audit</a>. We set it up, run it with you for two months, then hand it over.</p>
 
       <div className="relative mt-12 flex flex-wrap gap-2">
         {automations.map((a, i) => (

@@ -5,7 +5,10 @@ import { btnCls, Field, ghostCls, inputCls, rs } from "@/components/hub/ui";
 type Pay = { id: string; email: string; name: string; whatsapp: string; method: string; txn: string; amount: number; createdAt: string; status: "pending" | "approved" | "rejected" };
 type Mem = { name: string; email: string; whatsapp: string; consent: boolean; role: string; createdAt: string; door?: string; pro: boolean };
 type S = { pricePkr: number; easypaisa: string; jazzcash: string; bank: string; note: string };
-type Data = { stats: { members: number; pro: number; pending: number; revenue: number }; payments: Pay[]; members: Mem[]; settings: S };
+type Audit = { id: string; name: string; business: string; whatsapp: string; email: string; interests: string[]; problem: string; createdAt: string };
+type Data = { stats: { members: number; pro: number; pending: number; revenue: number }; payments: Pay[]; audits: Audit[]; members: Mem[]; settings: S };
+
+const INTEREST: Record<string, string> = { whatsapp: "WhatsApp", leads: "Leads in one place", chatbot: "Chatbot", bookings: "Bookings", content: "AI content", report: "Weekly report" };
 
 const when = (iso: string) => new Date(iso).toLocaleString("en-PK", { day: "numeric", month: "short", hour: "numeric", minute: "2-digit" });
 const waLink = (n: string) => { const d = n.replace(/\D/g, ""); return `https://wa.me/${d.startsWith("0") ? "92" + d.slice(1) : d}`; };
@@ -13,7 +16,7 @@ const waLink = (n: string) => { const d = n.replace(/\D/g, ""); return `https://
 export default function Admin() {
   const [d, setD] = useState<Data | null>(null);
   const [state, setState] = useState<"loading" | "ok" | "denied">("loading");
-  const [tab, setTab] = useState<"payments" | "members" | "settings">("payments");
+  const [tab, setTab] = useState<"payments" | "audits" | "members" | "settings">("payments");
   const [busy, setBusy] = useState("");
   const [msg, setMsg] = useState("");
   const [shot, setShot] = useState("");
@@ -59,7 +62,7 @@ export default function Admin() {
       </ul>
 
       <div className="mt-6 flex flex-wrap items-center gap-2">
-        {(["payments", "members", "settings"] as const).map((t) => <button key={t} onClick={() => { setTab(t); setMsg(""); }} aria-pressed={tab === t} className={`h-11 rounded-full border px-5 text-sm capitalize ${tab === t ? "border-accent bg-accent font-semibold text-[#111]" : "border-line text-mute"}`}>{t}{t === "payments" && d.stats.pending ? ` (${d.stats.pending})` : ""}</button>)}
+        {(["payments", "audits", "members", "settings"] as const).map((t) => <button key={t} onClick={() => { setTab(t); setMsg(""); }} aria-pressed={tab === t} className={`h-11 rounded-full border px-5 text-sm capitalize ${tab === t ? "border-accent bg-accent font-semibold text-[#111]" : "border-line text-mute"}`}>{t === "audits" ? "AI audits" : t}{t === "payments" && d.stats.pending ? ` (${d.stats.pending})` : ""}{t === "audits" && d.audits.length ? ` (${d.audits.length})` : ""}</button>)}
         <span className="flex-1" />
         <button onClick={load} className={ghostCls}>Refresh</button>
         <button onClick={logout} className={ghostCls}>Sign out</button>
@@ -95,6 +98,27 @@ export default function Admin() {
                     <button onClick={() => setConfirm({ p, action: p.status === "approved" ? "reject" : "approve" })} className="text-sm text-mute underline underline-offset-4">Change</button>
                   </>
                 )}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {tab === "audits" && (
+        <div className="mt-4 grid gap-3">
+          {d.audits.length === 0 && <p className="rounded-[20px] border border-line p-8 text-center text-mute">No AI audit requests yet. When someone fills the form on /ai-solutions it appears here.</p>}
+          {d.audits.map((a) => (
+            <div key={a.id} className="grid gap-4 rounded-[20px] border border-line bg-bg-2 p-5 md:grid-cols-12">
+              <div className="md:col-span-4">
+                <p className="font-semibold">{a.name}</p>
+                <p className="text-sm text-mute">{a.business}</p>
+                <a href={`${waLink(a.whatsapp)}?text=${encodeURIComponent(`Hi ${a.name}, this is Afshal from Star X Marketing about your free AI audit for ${a.business}.`)}`} target="_blank" rel="noopener noreferrer" className="text-sm text-accent underline-offset-4 hover:underline">WhatsApp {a.whatsapp}</a>
+                {a.email && <a href={`mailto:${a.email}`} className="block break-all text-sm text-mute underline-offset-4 hover:underline">{a.email}</a>}
+                <p className="mt-1 text-xs text-mute">{when(a.createdAt)}</p>
+              </div>
+              <div className="md:col-span-8">
+                {a.interests.length > 0 && <ul className="flex flex-wrap gap-2">{a.interests.map((k) => <li key={k} className="rounded-full border border-line px-3 py-1 text-xs">{INTEREST[k] ?? k}</li>)}</ul>}
+                <p className="mt-3 whitespace-pre-wrap leading-relaxed">{a.problem}</p>
               </div>
             </div>
           ))}
