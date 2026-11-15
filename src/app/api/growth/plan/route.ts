@@ -1,4 +1,5 @@
 import { generateText } from "ai";
+import { aiModel, aiOptions } from "@/lib/ai";
 import { json, limited, sameOrigin, sessionEmail } from "@/lib/auth";
 import { DAILY_GENERATIONS, getGrowth, isModule, parseSteps, saveGrowth } from "@/lib/growth";
 import { modules } from "@/data/growth";
@@ -46,7 +47,8 @@ export async function POST(req: Request) {
 
   try {
     const { text } = await generateText({
-      model: "anthropic/claude-haiku-5.5",
+      model: aiModel(),
+      ...aiOptions,
       maxOutputTokens: 2400,
       system:
         "You are a practical digital marketing coach for small business owners, mostly in Pakistan. " +

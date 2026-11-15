@@ -1,4 +1,5 @@
 import { streamText } from "ai";
+import { aiModel, aiOptions } from "@/lib/ai";
 import { generatorTasks, type GeneratorKey } from "@/data/hub";
 
 /**
@@ -34,7 +35,8 @@ export async function POST(req: Request) {
 
   try {
     const result = streamText({
-      model: "anthropic/claude-haiku-5.5",
+      model: aiModel(),
+      ...aiOptions,
       maxOutputTokens: 900,
       system:
         "You are a social media content writer for small businesses and creators, mostly in Pakistan. " +
