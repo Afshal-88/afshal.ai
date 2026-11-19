@@ -56,5 +56,18 @@ function Card({ s, i }: { s: ServiceItem; i: number }) {
 }
 
 export default function ServiceGrid({ items }: { items: ServiceItem[] }) {
-  return <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{items.map((s, i) => <Card key={s.title} s={s} i={i} />)}</ul>;
+  return (
+    <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {items.map((s, i) => <Card key={s.title} s={s} i={i} />)}
+      <li className="sm:col-span-2 lg:col-span-2">
+        <div className="flex h-full flex-col justify-between gap-6 rounded-[24px] border border-dashed border-white/20 p-6 md:flex-row md:items-end md:p-7">
+          <div>
+            <h3 className="display text-2xl leading-tight md:text-3xl">Not sure which one you need?</h3>
+            <p className="mt-3 max-w-md leading-relaxed text-mute">Tell us about your business and we&apos;ll tell you where to start, even if it&apos;s just one thing.</p>
+          </div>
+          <ContactButton className="inline-flex shrink-0 items-center gap-2 self-start rounded-full bg-accent px-6 py-4 text-sm font-semibold text-[#111] transition-transform active:scale-[0.97] md:self-auto">Talk to us <Icon name="ArrowRight" className="h-4 w-4" /></ContactButton>
+        </div>
+      </li>
+    </ul>
+  );
 }

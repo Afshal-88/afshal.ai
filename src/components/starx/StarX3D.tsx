@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import * as THREE from "three";
 import { X_BOX, X_POLYS } from "./xShape";
 
-const S = 1 / 110; // logo px -> scene units
+const S = 1 / 150; // logo px -> scene units
 const cx = X_BOX.x + X_BOX.w / 2, cy = X_BOX.y + X_BOX.h / 2;
 
 function XMark() {
@@ -20,8 +20,8 @@ function XMark() {
   useFrame((state, dt) => {
     const g = group.current; if (!g) return;
     const t = state.clock.elapsedTime;
-    const tx = state.pointer.y * -0.35 + Math.sin(t * 0.6) * 0.06;
-    const ty = state.pointer.x * 0.55 + Math.sin(t * 0.4) * 0.25;
+    const tx = state.pointer.y * -0.18 + Math.sin(t * 0.6) * 0.05;
+    const ty = state.pointer.x * 0.28 + Math.sin(t * 0.4) * 0.14;
     g.rotation.x += (tx - g.rotation.x) * Math.min(1, dt * 3);
     g.rotation.y += (ty - g.rotation.y) * Math.min(1, dt * 3);
     g.position.y = Math.sin(t * 0.9) * 0.08;

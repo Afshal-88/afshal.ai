@@ -25,15 +25,21 @@ export default function CursorGlow() {
       g.style.transform = `translate3d(${glowP.x - 300}px, ${glowP.y - 300}px, 0)`;
       raf = Math.abs(pos.x - glowP.x) + Math.abs(pos.y - glowP.y) > 0.4 ? requestAnimationFrame(loop) : 0;
     };
+    const tag = (t: HTMLElement | null) => {
+      if (!t) return;
+      r.classList.toggle("is-text", !!t.closest("input, textarea, select, [contenteditable]"));
+      const card = !!t.closest("[data-cursor=card]");
+      r.classList.toggle("is-card", card && !t.closest("a, button"));
+      r.classList.toggle("is-link", !!t.closest("a, button, [role=button], summary, label"));
+    };
+    const onScroll = () => tag(document.elementFromPoint(pos.x, pos.y) as HTMLElement | null);
+    addEventListener("scroll", onScroll, { passive: true });
     const move = (e: PointerEvent) => {
       pos.x = e.clientX; pos.y = e.clientY;
       d.style.transform = `translate3d(${pos.x}px, ${pos.y}px, 0)`;
       g.style.opacity = r.style.opacity = d.style.opacity = "1";
       const t = e.target as HTMLElement;
-      r.classList.toggle("is-text", !!t.closest("input, textarea, select, [contenteditable]"));
-      const card = !!t.closest("[data-cursor=card]");
-      r.classList.toggle("is-card", card && !t.closest("a, button"));
-      r.classList.toggle("is-link", !!t.closest("a, button, [role=button], summary, label"));
+      tag(t);
       if (!raf) raf = requestAnimationFrame(loop);
     };
     const leave = () => { g.style.opacity = r.style.opacity = d.style.opacity = "0"; };
@@ -42,6 +48,7 @@ export default function CursorGlow() {
     return () => {
       cancelAnimationFrame(raf);
       removeEventListener("pointermove", move);
+      removeEventListener("scroll", onScroll);
       document.removeEventListener("pointerleave", leave);
     };
   }, []);
