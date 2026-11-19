@@ -20,8 +20,9 @@ function XMark() {
   useFrame((state, dt) => {
     const g = group.current; if (!g) return;
     const t = state.clock.elapsedTime;
-    const tx = state.pointer.y * -0.18 + Math.sin(t * 0.6) * 0.05;
-    const ty = state.pointer.x * 0.28 + Math.sin(t * 0.4) * 0.14;
+    const px = THREE.MathUtils.clamp(state.pointer.x, -1, 1), py = THREE.MathUtils.clamp(state.pointer.y, -1, 1);
+    const tx = py * -0.18 + Math.sin(t * 0.6) * 0.05;
+    const ty = px * 0.28 + Math.sin(t * 0.4) * 0.14;
     g.rotation.x += (tx - g.rotation.x) * Math.min(1, dt * 3);
     g.rotation.y += (ty - g.rotation.y) * Math.min(1, dt * 3);
     g.position.y = Math.sin(t * 0.9) * 0.08;
