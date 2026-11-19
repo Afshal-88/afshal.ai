@@ -20,15 +20,14 @@ function AccountLink() {
 }
 
 const links = [
-  { href: "/#create", label: "AI content generator" },
-  { href: "/prompts", label: "Prompt library" },
-  { href: "/tools", label: "AI tools" },
+  { href: "/#services", label: "Services" },
   { href: "/ai-solutions", label: "AI solutions for business" },
+  { href: "/portfolio", label: "Afshal Amir · Portfolio" },
+  { href: "/#about", label: "About Star X" },
+  { href: "/ai", label: "Free AI tools" },
+  { href: "/prompts", label: "Prompt library" },
   { href: "/pricing", label: "Pricing" },
   { href: "/#website-check", label: "Free website check" },
-  { href: "/portfolio", label: "Portfolio" },
-  { href: "/portfolio#services", label: "Services" },
-  { href: "/portfolio#starx", label: "Star X Marketing" },
   { href: "/#contact", label: "Contact" },
 ];
 
@@ -68,9 +67,17 @@ export default function Nav() {
         transition={{ duration: 0.45, ease: [0.23, 1, 0.32, 1] }}
       >
         <div className={`mx-auto flex items-center justify-between px-5 py-4 transition-[background-color] duration-300 md:px-10 ${scrolled && !open ? "bg-bg/95" : ""}`}>
-          <Link href="/" className="group flex items-center gap-3" aria-label={`${profile.name} — home`}>
-            <Logo className="h-9 w-auto transition-opacity duration-300 group-hover:opacity-80 md:h-10" />
-          </Link>
+          <div className="flex min-w-0 items-center gap-2.5 md:gap-4">
+            <Link href="/" className="group shrink-0" aria-label="Star X Marketing — home">
+              <img src="/brand/starx-logo-sm.webp" srcSet="/brand/starx-logo-sm.webp 170w, /brand/starx-logo.webp 425w" sizes="90px" alt="Star X Marketing" width={170} height={96} className="h-9 w-auto transition-opacity duration-300 group-hover:opacity-80 md:h-11" />
+            </Link>
+            <span aria-hidden className="h-8 w-px shrink-0 bg-white/15" />
+            <Link href="/portfolio" className="group flex shrink-0 items-center gap-2.5 rounded-full border border-white/15 bg-bg py-1.5 pl-2 pr-3 transition-colors duration-300 hover:border-accent md:pl-3 md:pr-4" aria-label={`${profile.name} — portfolio`}>
+              <Logo mark className="h-7 w-auto md:hidden" />
+              <Logo className="hidden h-7 w-auto md:block" />
+              <span className="hidden text-xs font-semibold uppercase tracking-wide text-accent sm:block">Portfolio</span>
+            </Link>
+          </div>
           <div className="flex items-center gap-2">
             <AccountLink />
             <div className="hidden md:block">

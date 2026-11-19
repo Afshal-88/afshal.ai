@@ -1,140 +1,153 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Generator from "@/components/hub/Generator";
-import WebsiteCheck from "@/components/sections/WebsiteCheck";
-import Contact from "@/components/sections/Contact";
 import Footer from "@/components/Footer";
 import Icon from "@/components/ui/Icon";
-import LazyVideo from "@/components/ui/LazyVideo";
+import Marquee from "@/components/ui/Marquee";
+import Magnetic from "@/components/Magnetic";
+import { FadeUp, SplitLines } from "@/components/Reveal";
 import { ContactButton } from "@/components/ui/ContactModal";
-import { promptCats, promptCount } from "@/data/prompts";
-import { proCount } from "@/data/prompts-pro";
-import { aiReels, toolGroups } from "@/data/hub";
+import WebsiteCheck from "@/components/sections/WebsiteCheck";
+import Contact from "@/components/sections/Contact";
+import HeroX, { FlatX } from "@/components/starx/HeroX";
+import ServiceGrid from "@/components/starx/ServiceGrid";
+import { process, starxServices } from "@/data/starx-home";
+import { starx } from "@/data/v2";
 import { profile } from "@/data/site";
 
-const title = "Afshal.ai — AI Reel Scripts, Prompts & Content Tools";
+const title = "Star X Marketing — Digital Marketing Agency in Lahore";
 const description =
-  "Free AI content generator for reels, hooks, captions and content plans in English and Urdu, a library of ready AI prompts, an AI tools directory and a free website check. By Afshal Amir, Lahore.";
+  "Star X Marketing is a digital marketing agency in Lahore led by Afshal Amir: branding, websites, e-commerce, social media, video, paid ads, AI integration and business automation.";
 
 export const metadata: Metadata = {
   title: { absolute: title },
   description,
   alternates: { canonical: "/" },
-  openGraph: { type: "website", title, description, url: profile.site, siteName: "Afshal Amir" },
+  openGraph: { type: "website", title, description, url: profile.site, siteName: "Star X Marketing" },
+  twitter: { card: "summary_large_image", title, description },
 };
 
-const toolCount = toolGroups.reduce((n, g) => n + g.tools.length, 0);
+const facts: [string, React.ReactNode][] = [
+  ["Based in", "Lahore, Pakistan"],
+  ["Led by", <Link key="l" href="/portfolio" className="text-accent underline-offset-4 hover:underline">Afshal Amir, Marketing Director</Link>],
+  ["Services", `${starxServices.length}, from branding to automation`],
+  ["Experience", "50+ websites built by our lead, for clients in Pakistan, the UK, the US, the UAE and Canada"],
+  ["Instagram", <a key="i" href={starx.instagram} target="_blank" rel="noopener noreferrer" className="text-accent underline-offset-4 hover:underline">{starx.handle}</a>],
+  ["WhatsApp", <a key="w" href={`https://wa.me/${profile.whatsapp}`} target="_blank" rel="noopener noreferrer" className="text-accent underline-offset-4 hover:underline">0342 0757848</a>],
+];
 
-export default function Hub() {
+export default function StarXHome() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
-    name: "Afshal.ai AI content generator",
+    "@type": "WebPage",
+    "@id": `${profile.site}/#home`,
     url: profile.site,
-    applicationCategory: "BusinessApplication",
-    operatingSystem: "Web",
-    inLanguage: ["en", "ur"],
+    name: title,
     description,
-    offers: { "@type": "Offer", price: "0", priceCurrency: "PKR" },
-    featureList: ["AI reel script generator", "Hook generator", "Caption generator", "7-day content plan", "AI video prompt generator", "AI prompt library", "Free website check"],
-    author: { "@id": `${profile.site}/#person` },
+    about: { "@id": `${profile.site}/#starx` },
   };
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <main id="main">
-        <section className="relative px-5 pb-6 pt-28 md:px-10 md:pb-10 md:pt-36">
-          <div className="grid items-end gap-10 md:grid-cols-12">
-            <div className="md:col-span-8">
-              <p className="text-base text-mute">Afshal.ai · by Afshal Amir</p>
-              <h1 className="display mt-4 text-[13vw] leading-[0.98] md:text-[6.4vw]">Grow your brand <span className="text-accent">with AI.</span></h1>
-              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-mute md:text-xl">
-                Write reel scripts, hooks and captions in seconds, copy prompts that work, and check what&apos;s holding your website back. Free tools in English and Urdu, built by a marketer who uses them on real client work.
-              </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <a href="#create" className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-4 text-sm font-semibold text-[#111] transition-transform active:scale-[0.97]"><Icon name="Sparkles" className="h-4 w-4" /> Create content free</a>
-                <a href="#website-check" className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-4 text-sm font-medium transition-colors hover:border-white/60"><Icon name="Gauge" className="h-4 w-4" /> Check my website</a>
+        <section className="relative overflow-hidden px-5 pb-10 pt-28 md:px-10 md:pb-16 md:pt-32">
+          <div className="grid items-center gap-8 lg:grid-cols-12">
+            <div className="lg:col-span-7">
+              <p className="flex items-center gap-3 text-base text-mute"><FlatX className="h-5 w-auto" /> Star X Marketing · Lahore</p>
+              <SplitLines as="h1" className="display mt-5 text-[12vw] leading-[0.98] md:text-[5.6vw]" lines={["Branding, websites,", "marketing and", <span key="a" className="text-accent">AI automation.</span>]} />
+              <FadeUp delay={0.3}>
+                <p className="mt-6 max-w-xl text-lg leading-relaxed text-mute md:text-xl">We are a digital marketing agency led by Afshal Amir. One team plans and runs your brand, website and marketing, so every part works from the same plan.</p>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <Magnetic>
+                    <ContactButton className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-4 text-sm font-semibold text-[#111] transition-transform active:scale-[0.97]">Start a project <Icon name="ArrowRight" className="h-4 w-4" /></ContactButton>
+                  </Magnetic>
+                  <a href="#services" className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-4 text-sm font-medium transition-colors hover:border-white/60">Our services</a>
+                  <Link href="/portfolio" className="inline-flex items-center gap-2 rounded-full px-4 py-4 text-sm font-medium text-mute transition-colors hover:text-ink">See Afshal&apos;s portfolio <Icon name="ArrowUpRight" className="h-4 w-4" /></Link>
+                </div>
+              </FadeUp>
+            </div>
+            <div className="mx-auto w-full max-w-[560px] lg:col-span-5"><HeroX /></div>
+          </div>
+        </section>
+
+        <div className="border-y border-line py-5">
+          <Marquee speed={45} gap="2.5rem">
+            {starxServices.map((s) => (
+              <span key={s.title} className="flex items-center gap-10 whitespace-nowrap">
+                <span className="display text-2xl md:text-4xl">{s.title}</span>
+                <FlatX className="h-6 w-auto md:h-8" />
+              </span>
+            ))}
+          </Marquee>
+        </div>
+
+        <section id="services" className="scroll-mt-20 px-5 py-16 md:px-10 md:py-24">
+          <div className="grid gap-6 md:grid-cols-12 md:items-end">
+            <SplitLines className="display text-4xl md:col-span-7 md:text-6xl" lines={["What we do"]} />
+            <p className="text-lg text-mute md:col-span-5">Ten services under one roof. Most businesses start with one or two and add more once the first is working.</p>
+          </div>
+          <div className="mt-10"><ServiceGrid items={starxServices} /></div>
+        </section>
+
+        <section className="px-5 md:px-10">
+          <FadeUp>
+            <div className="grid gap-6 rounded-[28px] bg-accent p-6 text-[#111] md:grid-cols-12 md:p-10">
+              <div className="md:col-span-8">
+                <p className="text-sm font-semibold uppercase tracking-wide">AI solutions</p>
+                <h2 className="display mt-3 text-4xl md:text-5xl">We set up your AI, run it for two months, then hand it over.</h2>
+                <p className="mt-4 max-w-2xl text-lg">WhatsApp replies, lead capture, chatbots, bookings and an AI content system, built on your own accounts. We train your team so you can run it yourselves.</p>
+              </div>
+              <div className="flex flex-wrap items-end gap-3 md:col-span-4 md:justify-end">
+                <Link href="/ai-solutions" className="inline-flex items-center gap-2 rounded-full bg-[#111] px-6 py-4 text-sm font-semibold text-white transition-transform active:scale-[0.97]">Get a free AI audit <Icon name="ArrowRight" className="h-4 w-4" /></Link>
+                <Link href="/ai" className="inline-flex items-center gap-2 rounded-full border border-black/40 px-6 py-4 text-sm font-semibold">Try the free AI tools</Link>
               </div>
             </div>
-            <Link href="/portfolio" className="group flex items-center gap-4 rounded-[24px] border border-line bg-bg-2 p-3 pr-5 transition-colors hover:border-white/30 md:col-span-4">
-              <img src="/img/me-suit.webp" alt="Afshal Amir" width={96} height={120} className="h-28 w-24 rounded-2xl object-cover object-top" />
-              <span>
-                <span className="block text-lg font-semibold">Afshal Amir</span>
-                <span className="mt-1 block text-sm leading-snug text-mute">Marketing Director, Star X Marketing. 50+ websites built.</span>
-                <span className="mt-2 inline-flex items-center gap-1 text-sm text-accent">See my work <Icon name="ArrowRight" className="h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
-              </span>
+          </FadeUp>
+        </section>
+
+        <section id="process" className="px-5 py-16 md:px-10 md:py-24">
+          <SplitLines className="display text-4xl md:text-6xl" lines={["How we work"]} />
+          <ol className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            {process.map((p, i) => (
+              <FadeUp key={p.title} delay={i * 0.08} className="h-full">
+                <li className="group h-full rounded-[24px] border border-line p-6 transition-colors duration-300 hover:border-white/30">
+                  <span className="display block text-5xl text-accent transition-transform duration-500 group-hover:-translate-y-1">{String(i + 1).padStart(2, "0")}</span>
+                  <h3 className="mt-6 text-xl font-semibold">{p.title}</h3>
+                  <p className="mt-2 leading-relaxed text-mute">{p.body}</p>
+                </li>
+              </FadeUp>
+            ))}
+          </ol>
+        </section>
+
+        <section id="about" className="scroll-mt-20 px-5 pb-16 md:px-10 md:pb-24">
+          <div className="grid gap-6 lg:grid-cols-12">
+            <div className="rounded-[28px] border border-line bg-bg-2 p-6 md:p-10 lg:col-span-7">
+              <img src="/brand/starx-logo.webp" alt="Star X Marketing logo" width={425} height={240} className="h-20 w-auto md:h-24" loading="lazy" />
+              <h2 className="display mt-8 text-3xl md:text-5xl">About Star X Marketing</h2>
+              <p className="mt-4 text-lg leading-relaxed text-mute">{starx.pitch} Brand, website, social media, ads and automation are planned together, so they support each other instead of pulling in different directions.</p>
+              <dl className="mt-8 grid gap-x-6 gap-y-4 border-t border-line pt-6 sm:grid-cols-2">
+                {facts.map(([k, v]) => (
+                  <div key={k}>
+                    <dt className="label text-dim">{k}</dt>
+                    <dd className="mt-1">{v}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+            <Link href="/portfolio" className="group relative flex min-h-[420px] flex-col justify-end overflow-hidden rounded-[28px] border border-line lg:col-span-5">
+              <img src="/img/me-suit.webp" alt="Afshal Amir" width={720} height={900} loading="lazy" className="absolute inset-0 h-full w-full object-cover object-top grayscale transition duration-700 group-hover:scale-[1.03] group-hover:grayscale-0" />
+              <span aria-hidden className="absolute inset-0 bg-[linear-gradient(to_top,rgba(15,15,15,.95),rgba(15,15,15,.2)_55%,transparent)]" />
+              <div className="relative p-6 md:p-8">
+                <p className="label text-accent">Led by</p>
+                <p className="display mt-2 text-4xl">Afshal Amir</p>
+                <p className="mt-2 max-w-sm text-mute">Marketing Director of Star X. Software engineer by degree, digital marketer by trade, with a LUMS digital marketing certificate.</p>
+                <span className="mt-5 inline-flex items-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-semibold text-bg transition-colors group-hover:bg-accent group-hover:text-[#111]">See my portfolio <Icon name="ArrowRight" className="h-4 w-4" /></span>
+              </div>
             </Link>
           </div>
         </section>
 
-        <Generator />
-
-        <section id="prompts" className="scroll-mt-20 px-5 py-14 md:px-10 md:py-20">
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <div>
-              <h2 className="display text-[11vw] md:text-[5vw]">Prompt library</h2>
-              <p className="mt-3 max-w-xl text-lg text-mute">{promptCount + proCount} ready prompts in {promptCats.length} categories: {promptCount} free, {proCount} advanced ones in Pro. Copy, fill in the brackets, paste into ChatGPT, Claude or Gemini.</p>
-            </div>
-            <Link href="/prompts" className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3.5 text-sm font-semibold text-[#111] transition-transform active:scale-[0.97]">Open the library <Icon name="ArrowRight" className="h-4 w-4" /></Link>
-          </div>
-          <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-            {promptCats.map((c) => (
-              <li key={c.key}>
-                <Link href={`/prompts#${c.key}`} className="group flex h-full flex-col rounded-[20px] border border-line bg-bg-2 p-5 transition-colors hover:border-accent">
-                  <Icon name={c.icon} className="h-6 w-6 text-accent" />
-                  <span className="mt-4 text-lg font-semibold leading-tight">{c.title}</span>
-                  <span className="mt-2 flex-1 text-sm leading-snug text-mute">{c.blurb}</span>
-                  <span className="mt-4 text-sm text-mute group-hover:text-ink">{c.prompts.length + 5} prompts →</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        {aiReels.length > 0 && (
-          <section id="ai-reels" className="scroll-mt-20 px-5 py-14 md:px-10 md:py-20">
-            <h2 className="display text-[11vw] md:text-[5vw]">Reels I made with AI</h2>
-            <ul className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-4">
-              {aiReels.map((r) => (
-                <li key={r.video}>
-                  <div className="overflow-hidden rounded-[20px] border border-line bg-black"><LazyVideo src={r.video} poster={r.poster} className="aspect-[9/16] w-full object-cover" /></div>
-                  <p className="mt-2 font-semibold">{r.title}</p>
-                  <p className="text-sm text-mute">Made with {r.tools}</p>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
-
-        <section id="tools" className="scroll-mt-20 px-5 py-14 md:px-10 md:py-20">
-          <div className="grid gap-6 rounded-[28px] border border-line bg-bg-2 p-6 md:grid-cols-12 md:p-10">
-            <div className="md:col-span-7">
-              <h2 className="display text-4xl md:text-5xl">AI tools I actually use</h2>
-              <p className="mt-4 max-w-xl text-lg text-mute">{toolCount} tools for writing, images, video, voice and automation, with what each one is good for.</p>
-              <Link href="/tools" className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-3.5 text-sm font-medium transition-colors hover:border-white/60">See the tools <Icon name="ArrowRight" className="h-4 w-4" /></Link>
-            </div>
-            <ul className="flex flex-wrap content-center gap-2 md:col-span-5">
-              {toolGroups.flatMap((g) => g.tools).slice(0, 14).map((t) => <li key={t.name} className="rounded-full border border-line px-4 py-2 text-sm">{t.name}</li>)}
-            </ul>
-          </div>
-        </section>
-
         <WebsiteCheck />
-
-        <section className="px-5 py-14 md:px-10 md:py-20">
-          <div className="grid gap-6 rounded-[28px] bg-accent p-6 text-[#111] md:grid-cols-12 md:p-10">
-            <div className="md:col-span-8">
-              <h2 className="display text-4xl md:text-5xl">Want it done for you?</h2>
-              <p className="mt-4 max-w-2xl text-lg">My agency, Star X Marketing, builds websites, runs social media and ads, and sets up AI chatbots and automations for businesses.</p>
-              <p className="mt-3 max-w-2xl text-lg">For AI automation, we build and run it with you for two months, train your team, then hand it over. <Link href="/ai-solutions" className="font-semibold underline underline-offset-4">See how it works</Link>.</p>
-            </div>
-            <div className="flex flex-wrap items-end gap-3 md:col-span-4 md:justify-end">
-              <ContactButton className="inline-flex items-center gap-2 rounded-full bg-[#111] px-6 py-4 text-sm font-semibold text-white transition-transform active:scale-[0.97]">Start a project <Icon name="ArrowRight" className="h-4 w-4" /></ContactButton>
-              <Link href="/portfolio" className="inline-flex items-center gap-2 rounded-full border border-black/40 px-6 py-4 text-sm font-semibold">See the portfolio</Link>
-            </div>
-          </div>
-        </section>
-
         <Contact />
       </main>
       <Footer />

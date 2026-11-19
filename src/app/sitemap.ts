@@ -7,7 +7,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const img = (p: string) => `${profile.site}${p}`;
   const today = new Date("2026-11-11");
   return [
-    { url: profile.site, lastModified: today, changeFrequency: "weekly", priority: 1 },
+    { url: profile.site, lastModified: new Date("2026-11-20"), changeFrequency: "weekly", priority: 1 },
+    { url: `${profile.site}/ai`, lastModified: today, changeFrequency: "weekly", priority: 0.9 },
     { url: `${profile.site}/prompts`, lastModified: today, changeFrequency: "weekly", priority: 0.9 },
     { url: `${profile.site}/ai-solutions`, lastModified: new Date("2026-11-14"), changeFrequency: "monthly", priority: 0.9 },
     { url: `${profile.site}/pricing`, lastModified: today, changeFrequency: "monthly", priority: 0.7 },

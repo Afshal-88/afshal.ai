@@ -31,6 +31,8 @@ export default function CursorGlow() {
       g.style.opacity = r.style.opacity = d.style.opacity = "1";
       const t = e.target as HTMLElement;
       r.classList.toggle("is-text", !!t.closest("input, textarea, select, [contenteditable]"));
+      const card = !!t.closest("[data-cursor=card]");
+      r.classList.toggle("is-card", card && !t.closest("a, button"));
       r.classList.toggle("is-link", !!t.closest("a, button, [role=button], summary, label"));
       if (!raf) raf = requestAnimationFrame(loop);
     };

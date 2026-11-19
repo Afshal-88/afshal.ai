@@ -138,10 +138,17 @@ body {
 
 /* ---------- cursor ring ---------- */
 .cursor-ring { width: 34px; height: 34px; margin: -17px 0 0 -17px; border: 1.5px solid rgba(255,255,255,.55); border-radius: 999px; transition: width .25s cubic-bezier(.23,1,.32,1), height .25s cubic-bezier(.23,1,.32,1), margin .25s cubic-bezier(.23,1,.32,1), background-color .25s, border-color .25s, opacity .3s; }
-.cursor-ring.is-link { width: 58px; height: 58px; margin: -29px 0 0 -29px; background: rgba(77,141,255,.14); border-color: rgba(127,178,255,.8); }
+.cursor-ring.is-link { width: 58px; height: 58px; margin: -29px 0 0 -29px; background: rgba(255,212,0,.12); border-color: rgba(255,212,0,.85); }
+.cursor-ring.is-card { width: 92px; height: 92px; margin: -46px 0 0 -46px; background: transparent; border-color: rgba(255,212,0,.6); border-style: dashed; }
 .cursor-ring.is-text { opacity: 0 !important; }
-.cursor-dot { width: 6px; height: 6px; margin: -3px 0 0 -3px; border-radius: 999px; background: #7fb2ff; }
+.cursor-dot { width: 6px; height: 6px; margin: -3px 0 0 -3px; border-radius: 999px; background: #ffd400; }
 
 @media (prefers-reduced-motion: reduce) {
   .robot *, .robot-scan * { animation: none !important; }
 }
+
+/* Star X homepage */
+@keyframes starxFloat { 0%, 100% { transform: translateY(0) rotateY(-12deg) rotateX(4deg); } 50% { transform: translateY(-14px) rotateY(12deg) rotateX(-4deg); } }
+.starx-float { animation: starxFloat 7s ease-in-out infinite; transform-style: preserve-3d; }
+@keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .starx-float { animation: none; } }

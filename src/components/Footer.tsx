@@ -7,7 +7,7 @@ import { WHATSAPP_NUMBER } from "./WhatsAppFloat";
 import { profile, socials } from "@/data/site";
 import { starx } from "@/data/v2";
 
-const links = [["AI content generator", "/#create"], ["Prompt library", "/prompts"], ["AI tools", "/tools"], ["Pricing", "/pricing"], ["My account", "/account"], ["Website check", "/#website-check"], ["Portfolio", "/portfolio"], ["Websites", "/portfolio#websites"], ["Services", "/portfolio#services"], ["Star X", "/portfolio#starx"], ["Contact", "/#contact"]];
+const links = [["Services", "/#services"], ["AI solutions", "/ai-solutions"], ["About Star X", "/#about"], ["Afshal's portfolio", "/portfolio"], ["Websites", "/portfolio#websites"], ["Free AI tools", "/ai"], ["AI content generator", "/ai#create"], ["Prompt library", "/prompts"], ["AI tools", "/tools"], ["Pricing", "/pricing"], ["My account", "/account"], ["Website check", "/#website-check"], ["Contact", "/#contact"]];
 
 // Shown in full on white cards, the way the issuers present them.
 const credentials = [
@@ -41,8 +41,12 @@ export default function Footer() {
 
       <div className="mt-10 grid gap-10 border-t border-line pt-12 md:grid-cols-12">
         <div className="md:col-span-5">
-          <Logo className="h-10 w-auto" />
-          <p className="mt-5 max-w-sm text-mute">Afshal Amir — digital marketer and web developer in Lahore, Pakistan. Marketing Director at Star X Marketing.</p>
+          <div className="flex items-center gap-4">
+            <img src="/brand/starx-logo-sm.webp" alt="Star X Marketing" width={170} height={96} loading="lazy" className="h-12 w-auto" />
+            <span aria-hidden className="h-9 w-px bg-white/15" />
+            <Logo className="h-9 w-auto" />
+          </div>
+          <p className="mt-5 max-w-sm text-mute">Star X Marketing — digital marketing agency in Lahore, Pakistan, led by Afshal Amir, digital marketer and web developer.</p>
           <a href={`mailto:${profile.email}`} className="mt-4 block text-ink underline-offset-4 hover:underline">{profile.email}</a>
           <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer" className="mt-2 inline-flex items-center gap-2 text-ink underline-offset-4 hover:underline">
             <svg viewBox="0 0 24 24" className="h-4 w-4" fill={techIcons.whatsapp.hex} aria-hidden><path d={techIcons.whatsapp.path} /></svg>

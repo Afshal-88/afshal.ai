@@ -8,7 +8,7 @@ import { isIP } from "node:net";
  */
 
 const MAX_BYTES = 4 * 1024 * 1024;
-const UA = "Mozilla/5.0 (compatible; AfshalSiteCheck/1.0; +https://afshal-ai.vercel.app)";
+const UA = "Mozilla/5.0 (compatible; AfshalSiteCheck/1.0; +https://starxmarketing.com)";
 
 function privateIp(ip: string) {
   if (isIP(ip) === 6) {

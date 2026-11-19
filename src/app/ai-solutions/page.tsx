@@ -67,7 +67,7 @@ export default function AiSolutionsPage() {
               </li>
             ))}
           </ul>
-          <p className="mt-6 text-mute">Want to see AI write for a business? <Link href="/#create" className="text-accent underline underline-offset-4">Try the free content generator</Link>.</p>
+          <p className="mt-6 text-mute">Want to see AI write for a business? <Link href="/ai#create" className="text-accent underline underline-offset-4">Try the free content generator</Link>.</p>
         </section>
 
         <section id="how" className="scroll-mt-24 pt-16 md:pt-24">

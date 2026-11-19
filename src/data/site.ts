@@ -11,7 +11,7 @@ export const profile = {
   headline: ["Where technology", "meets creativity.", "And strategy turns", "into execution."],
   email: "afshalamir8@gmail.com",
   whatsapp: "923420757848",
-  site: "https://afshal-ai.vercel.app",
+  site: "https://starxmarketing.com",
 };
 
 export type Social = { key: string; label: string; url: string };
