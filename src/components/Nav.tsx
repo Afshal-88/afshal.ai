@@ -22,6 +22,7 @@ function AccountLink() {
 const links = [
   { href: "/#services", label: "Services" },
   { href: "/ai-solutions", label: "AI solutions for business" },
+  { href: "/portfolio-guide", label: "Build your portfolio" },
   { href: "/portfolio", label: "Afshal Amir · Portfolio" },
   { href: "/#about", label: "About Star X" },
   { href: "/ai", label: "Free AI tools" },
