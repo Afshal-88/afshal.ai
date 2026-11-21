@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
+import { connection } from "next/server";
 import Footer from "@/components/Footer";
 import Icon from "@/components/ui/Icon";
 import StarField from "@/components/starx/StarField";
@@ -23,6 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 async function Locked({ s }: { s: Solution }) {
+  await connection(); // read the session at request time, never while prerendering
   const me = await currentUser();
   const rest = s.steps.slice(OPEN_STEPS);
   if (me?.pro) return <ol className="mt-14 space-y-14">{rest.map((x) => <OpenStep key={x.n} s={x} />)}</ol>;
