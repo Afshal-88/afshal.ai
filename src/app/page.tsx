@@ -14,7 +14,8 @@ import WorkShowcase from "@/components/starx/WorkShowcase";
 import DesignGallery from "@/components/starx/DesignGallery";
 import InstagramFeed from "@/components/starx/InstagramFeed";
 import OpeningBanner from "@/components/starx/OpeningBanner";
-import { guideTeaser } from "@/data/portfolio-guide";
+import StarField from "@/components/starx/StarField";
+import SolutionsGrid from "@/components/solutions/SolutionsGrid";
 import { process, starxServices } from "@/data/starx-home";
 import { promptCount } from "@/data/prompts";
 import { proCount } from "@/data/prompts-pro";
@@ -56,10 +57,9 @@ const explore = [
   { icon: "Layers", title: "Services", body: "Ten services, from branding to automation.", href: "#services" },
   { icon: "Bot", title: "AI solutions", body: "We set it up, run it two months, hand it over.", href: "/ai-solutions" },
   { icon: "Briefcase", title: "Afshal's portfolio", body: "Websites, campaigns, design and experience.", href: "/portfolio" },
-  { icon: "Sparkles", title: "Free AI tools", body: "Content generator, prompts and tools.", href: "/ai" },
-  { icon: "GraduationCap", title: "Portfolio guide", body: "Build your 3D portfolio with AI.", href: "/portfolio-guide" },
+  { icon: "Target", title: "Marketing plan", body: "10 questions, 3 plans with prices.", href: "/plan" },
+  { icon: "GraduationCap", title: "Build with AI", body: "Portfolio, website, app, video, copy.", href: "/solutions" },
   { icon: "FileText", title: "Prompt library", body: `${promptCount + proCount} prompts in 10 categories.`, href: "/prompts" },
-  { icon: "BadgeCheck", title: "Pricing", body: "Free, or Pro with one payment.", href: "/pricing" },
   { icon: "MessageCircle", title: "Contact", body: "WhatsApp or the form, we reply fast.", href: "#contact" },
 ];
 
@@ -83,7 +83,7 @@ export default function StarXHome() {
             <div className="lg:col-span-7">
               <SplitLines as="h1" className="display text-[12vw] leading-[0.98] md:text-[5.6vw]" lines={["Branding, websites,", "marketing and", <span key="a" className="text-accent">AI automation.</span>]} />
               <FadeUp delay={0.3}>
-                <p className="mt-6 max-w-xl text-lg leading-relaxed text-mute md:text-xl">We are a digital marketing agency led by Afshal Amir. One team plans and runs your brand, website and marketing, so every part works from the same plan.</p>
+                <p className="mt-6 max-w-xl text-lg leading-relaxed text-mute md:text-xl">One team for your brand, website and marketing, led by Afshal Amir.</p>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <Magnetic>
                     <ContactButton className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-4 text-sm font-semibold text-[#111] transition-transform active:scale-[0.97]">Start a project <Icon name="ArrowRight" className="h-4 w-4" /></ContactButton>
@@ -108,42 +108,35 @@ export default function StarXHome() {
           </Marquee>
         </div>
 
-        <section id="portfolio-guide" className="scroll-mt-20 px-5 pt-16 md:px-10 md:pt-24">
-          <div className="grid gap-10 overflow-hidden rounded-[32px] border border-line bg-bg-2 p-6 md:p-12 lg:grid-cols-12 lg:items-center">
-            <div className="lg:col-span-6">
-              <p className="inline-flex items-center gap-2 rounded-full bg-accent px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#111]"><Icon name="Sparkles" className="h-3.5 w-3.5" /> Free guide</p>
-              <SplitLines className="display mt-5 text-4xl md:text-6xl" lines={["Build your 3D", "portfolio with AI"]} />
-              <p className="mt-5 max-w-xl text-lg leading-relaxed text-mute">Give the AI your portfolio PDF (or a folder of your work) and your CV. Our step-by-step guide and six ready prompts for Claude, ChatGPT and Gemini take you to a live 3D portfolio website on Vercel.</p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <Magnetic>
-                  <Link href="/portfolio-guide" className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-4 text-sm font-semibold text-[#111] transition-transform active:scale-[0.97]">Open the guide <Icon name="ArrowRight" className="h-4 w-4" /></Link>
-                </Magnetic>
-                <Link href="/account?next=/portfolio-guide" className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-4 text-sm font-medium transition-colors hover:border-white/60">Sign up free</Link>
-              </div>
-              <p className="mt-4 text-sm text-mute">Free with an account. Takes under a minute to sign up.</p>
+        <section id="plan" className="relative scroll-mt-20 overflow-hidden px-5 pt-16 md:px-10 md:pt-24">
+          <div className="relative grid gap-8 overflow-hidden rounded-[32px] border border-line bg-[#07070b] p-6 md:p-12 lg:grid-cols-12 lg:items-center">
+            <StarField density={1.4} />
+            <img src="/space/spiral-m96.webp" alt="Spiral galaxy photographed by the Hubble Space Telescope" width={1200} height={985} loading="lazy" className="pointer-events-none absolute -right-24 -top-16 w-[420px] max-w-none opacity-60 mix-blend-screen [mask-image:radial-gradient(closest-side,#000_60%,transparent)] md:-right-10 md:w-[560px] lg:static lg:order-2 lg:col-span-5 lg:w-full lg:opacity-100" />
+            <div className="relative lg:col-span-7">
+              <p className="inline-flex items-center gap-2 rounded-full bg-accent px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#111]"><Icon name="Target" className="h-3.5 w-3.5" /> 2-minute quiz</p>
+              <SplitLines className="display mt-5 text-4xl md:text-6xl" lines={["Get your", "marketing plan"]} />
+              <p className="mt-5 max-w-md text-lg text-mute">New or existing brand: answer 10 questions, see 3 plans with prices.</p>
+              <ul className="mt-6 flex flex-wrap gap-2 text-sm">
+                {["Website", "SEO", "Social media", "Ads"].map((t) => <li key={t} className="rounded-full border border-white/15 px-3 py-1.5">{t}</li>)}
+              </ul>
+              <div className="mt-8"><Magnetic><Link href="/plan" className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-4 text-sm font-semibold text-[#111] transition-transform active:scale-[0.97]">Start the quiz <Icon name="ArrowRight" className="h-4 w-4" /></Link></Magnetic></div>
             </div>
-            <ol className="relative grid gap-3 lg:col-span-6">
-              <span aria-hidden className="absolute bottom-6 left-[27px] top-6 w-px bg-white/10" />
-              {guideTeaser.map((t, i) => (
-                <FadeUp key={t.title} delay={i * 0.1}>
-                  <li className="group relative flex items-center gap-4 rounded-[20px] border border-line bg-bg p-4 transition-colors duration-300 hover:border-accent">
-                    <span className="relative grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-accent/10 text-accent transition-colors duration-300 group-hover:bg-accent group-hover:text-[#111]"><Icon name={t.icon} className="h-6 w-6" /></span>
-                    <span>
-                      <span className="label text-dim">Step {i + 1}</span>
-                      <span className="block font-semibold">{t.title}</span>
-                      <span className="block text-sm text-mute">{t.body}</span>
-                    </span>
-                  </li>
-                </FadeUp>
-              ))}
-            </ol>
           </div>
+        </section>
+
+        <section id="build-with-ai" className="relative scroll-mt-20 overflow-hidden px-5 pt-16 md:px-10 md:pt-24">
+          <StarField density={0.6} />
+          <div className="relative grid gap-6 md:grid-cols-12 md:items-end">
+            <SplitLines className="display text-4xl md:col-span-7 md:text-6xl" lines={["Build with AI"]} />
+            <p className="text-lg text-mute md:col-span-5">Step-by-step prompts for real projects. First 3 steps free.</p>
+          </div>
+          <div className="relative mt-10"><SolutionsGrid /></div>
         </section>
 
         <section id="services" className="scroll-mt-20 px-5 py-16 md:px-10 md:py-24">
           <div className="grid gap-6 md:grid-cols-12 md:items-end">
             <SplitLines className="display text-4xl md:col-span-7 md:text-6xl" lines={["What we do"]} />
-            <p className="text-lg text-mute md:col-span-5">Ten services under one roof. Most businesses start with one or two and add more once the first is working.</p>
+            <p className="text-lg text-mute md:col-span-5">Ten services. Start with one, add more later.</p>
           </div>
           <div className="mt-10"><ServiceGrid items={starxServices} /></div>
         </section>
@@ -151,7 +144,7 @@ export default function StarXHome() {
         <section id="work" className="scroll-mt-20 px-5 pb-16 md:px-10 md:pb-24">
           <div className="grid gap-6 md:grid-cols-12 md:items-end">
             <SplitLines className="display text-4xl md:col-span-7 md:text-6xl" lines={["Recent websites"]} />
-            <p className="text-lg text-mute md:col-span-5">Built by Afshal Amir and the Star X team, captured from the live pages. Hover to pause, click to open the case study or the site.</p>
+            <p className="text-lg text-mute md:col-span-5">Built by Afshal Amir and the Star X team.</p>
           </div>
           <div className="mt-10"><WorkShowcase /></div>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -160,10 +153,23 @@ export default function StarXHome() {
           </div>
         </section>
 
+        <section aria-label="Start your plan" className="relative mx-5 mb-16 overflow-hidden rounded-[32px] md:mx-10 md:mb-24">
+          <img src="/space/cosmic-cliffs.webp" alt="The Cosmic Cliffs in the Carina Nebula, photographed by the James Webb Space Telescope" width={1920} height={1111} loading="lazy" className="h-[340px] w-full object-cover md:h-[460px]" />
+          <span aria-hidden className="absolute inset-0 bg-[linear-gradient(to_right,rgba(7,7,11,.85),rgba(7,7,11,.2))]" />
+          <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-12">
+            <h2 className="display max-w-xl text-4xl md:text-6xl">Ready to market your brand?</h2>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link href="/plan" className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-4 text-sm font-semibold text-[#111]">Get your plan <Icon name="ArrowRight" className="h-4 w-4" /></Link>
+              <ContactButton className="inline-flex items-center gap-2 rounded-full border border-white/40 px-6 py-4 text-sm font-medium text-white hover:border-white">Talk to us</ContactButton>
+            </div>
+            <p className="mt-4 text-xs text-white/60">Photo: NASA, ESA, CSA, STScI (James Webb Space Telescope)</p>
+          </div>
+        </section>
+
         <section id="design" className="scroll-mt-20 px-5 pb-16 md:px-10 md:pb-24">
           <div className="grid gap-6 md:grid-cols-12 md:items-end">
             <SplitLines className="display text-4xl md:col-span-7 md:text-6xl" lines={["Design work"]} />
-            <p className="text-lg text-mute md:col-span-5">Branding, social posts, packaging, billboards and website designs by Afshal and the team. Click any one to see it full size.</p>
+            <p className="text-lg text-mute md:col-span-5">By Afshal and the team. Tap to see full size.</p>
           </div>
           <div className="mt-10"><DesignGallery /></div>
         </section>
@@ -171,7 +177,7 @@ export default function StarXHome() {
         <section id="instagram" className="scroll-mt-20 px-5 pb-16 md:px-10 md:pb-24">
           <div className="grid gap-6 md:grid-cols-12 md:items-end">
             <SplitLines className="display text-4xl md:col-span-7 md:text-6xl" lines={["On Instagram"]} />
-            <p className="text-lg text-mute md:col-span-5">Our latest posts, plus videos from creator campaigns Afshal planned with Ducky Bhai and Muhammad Abrar. Tap to open.</p>
+            <p className="text-lg text-mute md:col-span-5">Latest posts and creator campaigns Afshal planned.</p>
           </div>
           <div className="mt-10"><InstagramFeed /></div>
         </section>
@@ -192,12 +198,13 @@ export default function StarXHome() {
           </FadeUp>
         </section>
 
-        <section id="free-tools" className="scroll-mt-20 px-5 pt-16 md:px-10 md:pt-24">
-          <div className="grid gap-6 md:grid-cols-12 md:items-end">
+        <section id="free-tools" className="relative scroll-mt-20 overflow-hidden px-5 pt-16 md:px-10 md:pt-24">
+          <StarField density={0.5} />
+          <div className="relative grid gap-6 md:grid-cols-12 md:items-end">
             <SplitLines className="display text-4xl md:col-span-7 md:text-6xl" lines={["Free AI tools"]} />
-            <p className="text-lg text-mute md:col-span-5">Tools we built for business owners and creators. Free to use, no card needed.</p>
+            <p className="text-lg text-mute md:col-span-5">Free to use, no card needed.</p>
           </div>
-          <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <ul className="relative mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {freeTools.map((t, i) => (
               <FadeUp key={t.title} delay={i * 0.06} className="h-full">
                 <li className="h-full">
@@ -256,9 +263,10 @@ export default function StarXHome() {
           </div>
         </section>
 
-        <section id="explore" className="px-5 pb-16 md:px-10 md:pb-24">
+        <section id="explore" className="relative overflow-hidden px-5 pb-16 md:px-10 md:pb-24">
+          <StarField density={0.5} />
           <SplitLines className="display text-4xl md:text-6xl" lines={["Everything on this site"]} />
-          <ul className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
+          <ul className="relative mt-10 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
             {explore.map((e, i) => (
               <FadeUp key={e.title} delay={(i % 4) * 0.05} className="h-full">
                 <li className="h-full">

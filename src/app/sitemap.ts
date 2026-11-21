@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { profile, projects } from "@/data/site";
 import { websites } from "@/data/v2";
+import { solutions } from "@/data/solutions";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date("2026-11-10");
@@ -8,7 +9,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const today = new Date("2026-11-11");
   return [
     { url: profile.site, lastModified: new Date("2026-11-20"), changeFrequency: "weekly", priority: 1 },
-    { url: `${profile.site}/portfolio-guide`, lastModified: new Date("2026-11-21"), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${profile.site}/plan`, lastModified: new Date("2026-11-21"), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${profile.site}/solutions`, lastModified: new Date("2026-11-21"), changeFrequency: "monthly", priority: 0.9 },
+    ...solutions.map((x) => ({ url: `${profile.site}/solutions/${x.slug}`, lastModified: new Date("2026-11-21"), changeFrequency: "monthly" as const, priority: 0.8, images: [img(x.cover)] })),
     { url: `${profile.site}/ai`, lastModified: today, changeFrequency: "weekly", priority: 0.9 },
     { url: `${profile.site}/prompts`, lastModified: today, changeFrequency: "weekly", priority: 0.9 },
     { url: `${profile.site}/ai-solutions`, lastModified: new Date("2026-11-14"), changeFrequency: "monthly", priority: 0.9 },

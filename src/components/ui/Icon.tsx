@@ -74,12 +74,28 @@ import {
   Wrench,
   X,
   Zap,
+  Store,
+  Building2,
+  AppWindow,
+  PhoneCall,
+  Video,
+  PenLine,
+  Unlock,
+  Star,
   type LucideProps,
 } from "lucide-react";
 
 const map: Record<string, React.ComponentType<LucideProps>> = {
   Code2, Lock, LogOut, ShieldCheck, Download, CalendarDays, Briefcase, Languages, Copy, ArrowDown, Quote, LayoutDashboard, Cloud, ShoppingBag, Plug, ChevronLeft, ChevronRight, Monitor, MapPin, BadgeCheck,
   ArrowRight, ArrowUpRight, BarChart3, BellRing, Bot, Box, Brain, CalendarCheck, CalendarClock, Check, ChevronUp, Clapperboard, ClipboardList, Cpu, Database, FileText, Film, Filter, Fingerprint, FlaskConical, Gauge, Globe, GraduationCap, Hammer, Image, Layers, Lightbulb, LineChart, Mail, Megaphone, MessageCircle, MousePointerClick, Palette, Pause, PenTool, Play, Repeat, Rocket, RotateCcw, Search, Send, Share2, ShoppingCart, Smartphone, Sparkles, Target, TrendingUp, Trophy, UserRound, Users, Workflow, Wrench, X, Zap,
+  Store,
+  Building2,
+  AppWindow,
+  PhoneCall,
+  Video,
+  PenLine,
+  Unlock,
+  Star,
 };
 
 /** Renders one of the site's lucide icons by name, so content files can stay plain data. */

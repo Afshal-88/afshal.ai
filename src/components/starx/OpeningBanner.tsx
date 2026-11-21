@@ -24,7 +24,7 @@ export default function OpeningBanner() {
         <p className="max-w-xl text-base text-white/75 md:text-lg">Branding · Websites · Social media · Ads · AI automation</p>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
           <ContactButton className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-4 text-sm font-semibold text-[#111] transition-transform active:scale-[0.97]">Start a project <Icon name="ArrowRight" className="h-4 w-4" /></ContactButton>
-          <a href="/portfolio-guide" className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-4 text-sm font-medium text-white transition-colors hover:border-white/70">Build your portfolio free</a>
+          <a href="/plan" className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-4 text-sm font-medium text-white transition-colors hover:border-white/70">Get your plan in 2 minutes</a>
         </div>
         <a href="#intro" aria-label="Scroll down" className="mt-8 grid h-11 w-7 place-items-start justify-center rounded-full border border-white/30 pt-2">
           <span className="block h-2 w-1 animate-bounce rounded-full bg-white/80" />

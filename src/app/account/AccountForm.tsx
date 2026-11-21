@@ -15,7 +15,7 @@ export default function AccountForm() {
   const submit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(); setErr(""); setBusy(true);
     const f = Object.fromEntries(new FormData(e.currentTarget));
-    const res = await fetch(`/api/auth/${mode}`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ ...f, consent: f.consent === "on", door: safeNext().includes("portfolio-guide") ? "portfolio-guide" : safeNext().includes("pricing") ? "pricing" : "prompts" }) }).catch(() => null);
+    const res = await fetch(`/api/auth/${mode}`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ ...f, consent: f.consent === "on", door: safeNext().includes("solutions") ? "solutions" : safeNext().includes("pricing") ? "pricing" : "prompts" }) }).catch(() => null);
     const d = await res?.json().catch(() => ({}));
     if (!res?.ok) { setErr(d?.error || "Something went wrong. Check your connection and try again."); setBusy(false); return; }
     location.href = d.role === "admin" ? "/admin" : safeNext();
