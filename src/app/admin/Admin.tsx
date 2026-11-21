@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { btnCls, Field, ghostCls, inputCls, rs } from "@/components/hub/ui";
 
 type Pay = { id: string; email: string; name: string; whatsapp: string; method: string; txn: string; amount: number; createdAt: string; status: "pending" | "approved" | "rejected" };
-type Mem = { name: string; email: string; whatsapp: string; consent: boolean; role: string; createdAt: string; door?: string; pro: boolean };
+type Mem = { name: string; email: string; whatsapp: string; business?: string; consent: boolean; role: string; createdAt: string; door?: string; pro: boolean };
 type S = { pricePkr: number; easypaisa: string; jazzcash: string; bank: string; note: string };
 type Audit = { id: string; name: string; business: string; whatsapp: string; email: string; interests: string[]; problem: string; createdAt: string };
 type Data = { stats: { members: number; pro: number; pending: number; revenue: number }; payments: Pay[]; audits: Audit[]; members: Mem[]; settings: S };
@@ -127,16 +127,16 @@ export default function Admin() {
 
       {tab === "members" && (
         <div className="mt-4">
-          <a href="/api/admin/export" className={ghostCls}>Download all members (CSV)</a>
+          <a href="/api/admin/export" className={ghostCls}>Download members for Excel (CSV)</a>
           <div className="mt-3 overflow-x-auto rounded-[20px] border border-line">
-            <table className="w-full min-w-[640px] text-left text-sm">
-              <thead className="bg-bg-2 text-mute"><tr>{["Name", "Email", "WhatsApp", "Plan", "Joined"].map((h) => <th key={h} className="px-4 py-3 font-normal">{h}</th>)}</tr></thead>
+            <table className="w-full min-w-[760px] text-left text-sm">
+              <thead className="bg-bg-2 text-mute"><tr>{["Name", "Email", "WhatsApp", "Business", "Plan", "Joined"].map((h) => <th key={h} className="px-4 py-3 font-normal">{h}</th>)}</tr></thead>
               <tbody>
                 {d.members.map((m) => (
                   <tr key={m.email} className="border-t border-line">
                     <td className="px-4 py-3">{m.name}</td><td className="px-4 py-3">{m.email}</td>
                     <td className="px-4 py-3">{m.whatsapp ? <a href={waLink(m.whatsapp)} target="_blank" rel="noopener noreferrer" className="underline-offset-4 hover:underline">{m.whatsapp}</a> : "—"}{m.consent && <span className="ml-2 text-xs text-emerald-300">updates OK</span>}</td>
-                    <td className="px-4 py-3">{m.role === "admin" ? "Admin" : m.pro ? "Pro" : "Free"}</td><td className="px-4 py-3 text-mute">{when(m.createdAt)}</td>
+                    <td className="px-4 py-3">{m.business || "—"}</td><td className="px-4 py-3">{m.role === "admin" ? "Admin" : m.pro ? "Pro" : "Free"}</td><td className="px-4 py-3 text-mute">{when(m.createdAt)}</td>
                   </tr>
                 ))}
               </tbody>

@@ -13,6 +13,8 @@ import ServiceGrid from "@/components/starx/ServiceGrid";
 import WorkShowcase from "@/components/starx/WorkShowcase";
 import DesignGallery from "@/components/starx/DesignGallery";
 import InstagramFeed from "@/components/starx/InstagramFeed";
+import OpeningBanner from "@/components/starx/OpeningBanner";
+import { guideTeaser } from "@/data/portfolio-guide";
 import { process, starxServices } from "@/data/starx-home";
 import { promptCount } from "@/data/prompts";
 import { proCount } from "@/data/prompts-pro";
@@ -55,9 +57,9 @@ const explore = [
   { icon: "Bot", title: "AI solutions", body: "We set it up, run it two months, hand it over.", href: "/ai-solutions" },
   { icon: "Briefcase", title: "Afshal's portfolio", body: "Websites, campaigns, design and experience.", href: "/portfolio" },
   { icon: "Sparkles", title: "Free AI tools", body: "Content generator, prompts and tools.", href: "/ai" },
+  { icon: "GraduationCap", title: "Portfolio guide", body: "Build your 3D portfolio with AI.", href: "/portfolio-guide" },
   { icon: "FileText", title: "Prompt library", body: `${promptCount + proCount} prompts in 10 categories.`, href: "/prompts" },
   { icon: "BadgeCheck", title: "Pricing", body: "Free, or Pro with one payment.", href: "/pricing" },
-  { icon: "UserRound", title: "My account", body: "Sign up free or sign in.", href: "/account" },
   { icon: "MessageCircle", title: "Contact", body: "WhatsApp or the form, we reply fast.", href: "#contact" },
 ];
 
@@ -75,7 +77,8 @@ export default function StarXHome() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <main id="main">
-        <section className="relative overflow-hidden px-5 pb-10 pt-28 md:px-10 md:pb-16 md:pt-32">
+        <OpeningBanner />
+        <section id="intro" className="relative scroll-mt-0 overflow-hidden px-5 pb-10 pt-24 md:px-10 md:pb-16 md:pt-28">
           <div className="grid items-center gap-8 lg:grid-cols-12">
             <div className="lg:col-span-7">
               <SplitLines as="h1" className="display text-[12vw] leading-[0.98] md:text-[5.6vw]" lines={["Branding, websites,", "marketing and", <span key="a" className="text-accent">AI automation.</span>]} />
@@ -104,6 +107,38 @@ export default function StarXHome() {
             ))}
           </Marquee>
         </div>
+
+        <section id="portfolio-guide" className="scroll-mt-20 px-5 pt-16 md:px-10 md:pt-24">
+          <div className="grid gap-10 overflow-hidden rounded-[32px] border border-line bg-bg-2 p-6 md:p-12 lg:grid-cols-12 lg:items-center">
+            <div className="lg:col-span-6">
+              <p className="inline-flex items-center gap-2 rounded-full bg-accent px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#111]"><Icon name="Sparkles" className="h-3.5 w-3.5" /> Free guide</p>
+              <SplitLines className="display mt-5 text-4xl md:text-6xl" lines={["Build your 3D", "portfolio with AI"]} />
+              <p className="mt-5 max-w-xl text-lg leading-relaxed text-mute">Give the AI your portfolio PDF (or a folder of your work) and your CV. Our step-by-step guide and six ready prompts for Claude, ChatGPT and Gemini take you to a live 3D portfolio website on Vercel.</p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Magnetic>
+                  <Link href="/portfolio-guide" className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-4 text-sm font-semibold text-[#111] transition-transform active:scale-[0.97]">Open the guide <Icon name="ArrowRight" className="h-4 w-4" /></Link>
+                </Magnetic>
+                <Link href="/account?next=/portfolio-guide" className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-4 text-sm font-medium transition-colors hover:border-white/60">Sign up free</Link>
+              </div>
+              <p className="mt-4 text-sm text-mute">Free with an account. Takes under a minute to sign up.</p>
+            </div>
+            <ol className="relative grid gap-3 lg:col-span-6">
+              <span aria-hidden className="absolute bottom-6 left-[27px] top-6 w-px bg-white/10" />
+              {guideTeaser.map((t, i) => (
+                <FadeUp key={t.title} delay={i * 0.1}>
+                  <li className="group relative flex items-center gap-4 rounded-[20px] border border-line bg-bg p-4 transition-colors duration-300 hover:border-accent">
+                    <span className="relative grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-accent/10 text-accent transition-colors duration-300 group-hover:bg-accent group-hover:text-[#111]"><Icon name={t.icon} className="h-6 w-6" /></span>
+                    <span>
+                      <span className="label text-dim">Step {i + 1}</span>
+                      <span className="block font-semibold">{t.title}</span>
+                      <span className="block text-sm text-mute">{t.body}</span>
+                    </span>
+                  </li>
+                </FadeUp>
+              ))}
+            </ol>
+          </div>
+        </section>
 
         <section id="services" className="scroll-mt-20 px-5 py-16 md:px-10 md:py-24">
           <div className="grid gap-6 md:grid-cols-12 md:items-end">

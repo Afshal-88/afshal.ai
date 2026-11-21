@@ -15,7 +15,7 @@ export default function AccountForm() {
   const submit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(); setErr(""); setBusy(true);
     const f = Object.fromEntries(new FormData(e.currentTarget));
-    const res = await fetch(`/api/auth/${mode}`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ ...f, consent: f.consent === "on", door: safeNext().includes("pricing") ? "pricing" : "prompts" }) }).catch(() => null);
+    const res = await fetch(`/api/auth/${mode}`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ ...f, consent: f.consent === "on", door: safeNext().includes("portfolio-guide") ? "portfolio-guide" : safeNext().includes("pricing") ? "pricing" : "prompts" }) }).catch(() => null);
     const d = await res?.json().catch(() => ({}));
     if (!res?.ok) { setErr(d?.error || "Something went wrong. Check your connection and try again."); setBusy(false); return; }
     location.href = d.role === "admin" ? "/admin" : safeNext();
@@ -47,6 +47,7 @@ export default function AccountForm() {
       <form onSubmit={submit} className="mt-6 grid gap-4">
         {mode === "signup" && <Field label="Your name"><input name="name" required minLength={2} maxLength={80} autoComplete="name" className={inputCls} /></Field>}
         <Field label="Email"><input name="email" type="email" required autoComplete="email" className={inputCls} /></Field>
+        {mode === "signup" && <Field label="Business name" hint="Or your job title, e.g. Student or Graphic designer"><input name="business" required minLength={2} maxLength={120} autoComplete="organization" className={inputCls} /></Field>}
         {mode === "signup" && <Field label="WhatsApp number" hint="For your order updates. Example: 03001234567"><input name="whatsapp" type="tel" required inputMode="tel" autoComplete="tel" className={inputCls} /></Field>}
         <Field label="Password" hint={mode === "signup" ? "At least 8 characters." : undefined}><input name="password" type="password" required minLength={8} autoComplete={mode === "signup" ? "new-password" : "current-password"} className={inputCls} /></Field>
         {mode === "signup" && (

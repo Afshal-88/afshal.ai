@@ -14,7 +14,7 @@ const SECRET_SRC = process.env.SESSION_SECRET || process.env.BLOB_READ_WRITE_TOK
 if (!SECRET_SRC && process.env.VERCEL) throw new Error("SESSION_SECRET is missing");
 const SECRET = createHash("sha256").update((SECRET_SRC || "local-dev-only") + ":session:v1").digest();
 
-export type Member = { name: string; email: string; whatsapp: string; consent: boolean; pass: string; role: "member" | "admin"; createdAt: string; door?: string };
+export type Member = { name: string; email: string; whatsapp: string; business?: string; consent: boolean; pass: string; role: "member" | "admin"; createdAt: string; door?: string };
 export type SessionUser = { name: string; email: string; role: "member" | "admin"; pro: boolean };
 
 export const normEmail = (e: string) => e.trim().toLowerCase();
