@@ -1,6 +1,9 @@
 import React from "react";
 import { AbsoluteFill, Audio, Composition, Sequence, interpolate, staticFile } from "remotion";
 import timings from "./timings.json";
+import { AbsoluteFill as AF } from "remotion";
+import { BigNumber, BrowserLink, ColorReel, CtaColor, FileToSite, Glitch, GlowPhone } from "./Color";
+import { ScreenReel, screenFrames, type ScreenDef } from "./Screen";
 import { Backdrop, C, Caption, Chips, Cta, FPS, Headline, Phone, Report, Sheet, Statement, TopCard, fontCss } from "./kit";
 
 type Beat = { line: string; scene: React.ReactNode; card?: string };
@@ -37,6 +40,48 @@ const REEL04: ReelDef = {
     { line: "Get a free AI audit, and stop losing leads. Link in bio.", scene: <Cta top="Get a" big="FREE AI AUDIT" sub="Link in bio" /> },
   ],
 };
+
+
+const REEL05: ScreenDef = {
+  id: "Reel05", vo: "vo05.wav", rec: "rec-prompts.mp4", t: timings.r05, hook: "150 PROMPTS.\n100 FREE.",
+  beats: [
+    { line: "Stop paying for prompts. 100 of these 150 are free.", src: [0, 2.5], card: "100 free prompts" },
+    { line: "They are all on starxmarketing.com.", src: [0.5, 3], card: "starxmarketing.com/prompts" },
+    { line: "Reels, AI video, ads, SEO, sales, even Urdu content.", src: [3, 12], card: "10 categories" },
+    { line: "40 are open to everyone.", src: [12, 17], card: "40 open to all" },
+    { line: "60 more with a free account.", src: [17, 22], card: "+60 with free account" },
+    { line: "Copy one, fill in the brackets,", src: [31, 34], card: "Copy → fill [BRACKETS]", zoom: 1.15 },
+    { line: "and paste it into ChatGPT, Claude or Gemini.", src: [22, 30], card: "Paste into any AI" },
+    { line: "Link in bio. Stop paying for prompts.", src: [0, 1], cta: { top: "Free prompts", big: "LINK IN BIO", sub: "starxmarketing.com/prompts" } },
+  ],
+};
+const REEL06: ScreenDef = {
+  id: "Reel06", vo: "vo06.wav", rec: "rec-check.mp4", t: timings.r06, hook: "IS YOUR WEBSITE\nLOSING CUSTOMERS?",
+  beats: [
+    { line: "Stop guessing what's wrong with your website. Check it free.", src: [5, 8] },
+    { line: "It takes about a minute.", src: [0.8, 2.5], card: "Free · about 1 minute" },
+    { line: "Type your website on starxmarketing.com.", src: [0.8, 3], card: "starxmarketing.com/ai", zoom: 1.1 },
+    { line: "You get Google Lighthouse scores. Speed, SEO, accessibility, security.", src: [5, 9], card: "Google Lighthouse scores", zoom: 1.08 },
+    { line: "Plus what to fix first.", src: [9, 11.5], card: "What to fix first" },
+    { line: "We ran it on our own site.", src: [5, 7], card: "Our own site" },
+    { line: "It found 1 fix. Our meta description is too long.", src: [9.5, 12], card: "1 fix found", zoom: 1.12 },
+    { line: "Check yours free, and stop guessing. Link in bio.", src: [0, 1], cta: { top: "Check yours", big: "LINK IN BIO", sub: "Free website check" } },
+  ],
+};
+
+
+const R07T = timings.r07;
+const reel07Beats = [
+  { scene: () => <AF style={{ alignItems: "center", justifyContent: "center", paddingBottom: 260 }}><Glitch lines={["Stop sending", "a PDF.", "[Send a 3D]", "[portfolio]"]} size={118} /></AF> },
+  { scene: (d: number) => <GlowPhone rec="rec-portfolio.mp4" src={[0.5, 6]} dur={d} badge="LIVE · MY PORTFOLIO" /> },
+  { scene: (d: number) => <GlowPhone rec="rec-portfolio.mp4" src={[6, 12]} dur={d} badge="LIVE · MY PORTFOLIO" url="Free guide to build yours" /> },
+  { scene: () => <FileToSite /> },
+  { scene: () => <BigNumber n="6" label="ready prompts" chips={["Claude", "ChatGPT", "Gemini"]} /> },
+  { scene: (d: number) => <GlowPhone rec="rec-portfolio.mp4" src={[12, 22]} dur={d} badge="3D PORTFOLIO WEBSITE" /> },
+  { scene: () => <BrowserLink text="yourname.vercel.app" chips={["Free hosting", "Your own link"]} /> },
+  { scene: (d: number) => <GlowPhone rec="rec-guide.mp4" src={[0, 10]} dur={d} badge="FREE WITH AN ACCOUNT" url="starxmarketing.com/portfolio-guide" /> },
+  { scene: () => <CtaColor word="PORTFOLIO" sub="and I'll send you the free guide" /> },
+];
 
 const TAIL = 1.4;
 const frames = (r: ReelDef) => Math.round((r.t.end + TAIL) * FPS);
@@ -75,6 +120,10 @@ export const Root: React.FC = () => (
   <>
     {[REEL03, REEL04].map((r) => (
       <Composition key={r.id} id={r.id} component={() => <ReelView r={r} />} durationInFrames={frames(r)} fps={FPS} width={1080} height={1920} />
+    ))}
+    <Composition id="Reel07" component={() => <ColorReel t={R07T} words={timings.r07words} vo="vo07.wav" beats={reel07Beats} handle="@STARXMARKETING" />} durationInFrames={Math.round((R07T.end + 1.6) * FPS)} fps={FPS} width={1080} height={1920} />
+    {[REEL05, REEL06].map((r) => (
+      <Composition key={r.id} id={r.id} component={() => <ScreenReel r={r} />} durationInFrames={screenFrames(r)} fps={FPS} width={1080} height={1920} />
     ))}
   </>
 );
