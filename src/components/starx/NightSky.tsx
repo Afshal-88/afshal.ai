@@ -41,15 +41,20 @@ export default function NightSky({ onFormed }: { onFormed?: () => void }) {
       o.fillStyle = "#fff"; o.fillText("STAR ", W / 2 - total / 2, cy);
       o.fillStyle = "#ff0"; o.fillText("X", W / 2 - total / 2 + w1, cy);
       o.textAlign = "center"; o.fillStyle = "#fff";
-      o.font = `700 ${big * 0.34}px ${fam}`;
-      if ("letterSpacing" in o) (o as CanvasRenderingContext2D & { letterSpacing: string }).letterSpacing = `${big * 0.06}px`;
+      o.font = `800 ${big * (small ? 0.42 : 0.36)}px ${fam}`;
+      if ("letterSpacing" in o) (o as CanvasRenderingContext2D & { letterSpacing: string }).letterSpacing = `${big * (small ? 0.02 : 0.05)}px`;
       o.fillText("MARKETING", W / 2, cy + big * 0.78);
       const data = o.getImageData(0, 0, W, H).data;
-      const gap = small ? 4 : 5;
-      const pts: { x: number; y: number; yellow: boolean }[] = [];
-      for (let y = 0; y < H; y += gap) for (let x = 0; x < W; x += gap) {
-        const i = (y * W + x) * 4;
-        if (data[i + 3] > 140) pts.push({ x, y, yellow: data[i + 2] < 100 });
+      const cap = small ? 900 : 1800;
+      // even grid inside the letters: widen the grid until the dots fit the budget, so every letter stays readable
+      let pts: { x: number; y: number; yellow: boolean }[] = [];
+      for (let gap = 3; gap < 24; gap++) {
+        pts = [];
+        for (let y = 0; y < H; y += gap) for (let x = 0; x < W; x += gap) {
+          const i = (y * W + x) * 4;
+          if (data[i + 3] > 140) pts.push({ x, y, yellow: data[i + 2] < 100 });
+        }
+        if (pts.length <= cap) break;
       }
       for (let i = pts.length - 1; i > 0; i--) { const j = (Math.random() * (i + 1)) | 0; [pts[i], pts[j]] = [pts[j], pts[i]]; }
       return pts;
@@ -60,8 +65,7 @@ export default function NightSky({ onFormed }: { onFormed?: () => void }) {
       W = cv.clientWidth; H = cv.clientHeight;
       cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       const pts = textPoints();
-      const cap = small ? 900 : 1800;
-      const formers = pts.slice(0, cap);
+      const formers = pts;
       const free = small ? 220 : 500;
       stars = [];
       for (let i = 0; i < formers.length + free; i++) {
@@ -123,7 +127,7 @@ export default function NightSky({ onFormed }: { onFormed?: () => void }) {
         if (s.former && k > 0) {
           const jitter = Math.sin(t * 2 + s.tw) * 0.6;
           x = fx + (s.tx + jitter - fx) * k; y = fy + (s.ty - fy) * k;
-          size = size + (1.7 - size) * k; alpha = alpha + (1 - alpha) * k;
+          size = size + ((small ? 2 : 2.4) - size) * k; alpha = alpha + (1 - alpha) * k;
         }
         ctx.globalAlpha = alpha;
         ctx.fillStyle = s.former && k > 0.5 && s.yellow ? "#ffd400" : "#ffffff";
