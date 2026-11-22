@@ -21,7 +21,7 @@ const [flow, out] = process.argv.slice(2);
   const start = () => cdp.send('Page.startScreencast', { format: 'jpeg', quality: 88, maxWidth: 1080, maxHeight: 1920, everyNthFrame: 1 });
   const marks = {}; const mark = (k) => { marks[k] = frames.length ? frames[frames.length - 1].t : 0; };
   if (flow === 'portfolio' || flow === 'portfolio-guide') {
-    await go('https://starxmarketing.com/' + flow); await start(); mark('start');
+    await go('https://starxmarketing.com/' + (flow === 'portfolio-guide' ? 'solutions/portfolio' : flow)); await start(); mark('start');
     await p.waitForTimeout(3000);
     const h = await p.evaluate(() => document.body.scrollHeight);
     await scroll(Math.min(h - 693, flow === 'portfolio' ? 9000 : 3000), 20000); await p.waitForTimeout(1200);

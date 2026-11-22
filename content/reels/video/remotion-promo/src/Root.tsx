@@ -74,13 +74,13 @@ const R07T = timings.r07;
 const reel07Beats = [
   { scene: () => <AF style={{ alignItems: "center", justifyContent: "center", paddingBottom: 260 }}><Glitch lines={["Stop sending", "a PDF.", "[Send a 3D]", "[portfolio]"]} size={118} /></AF> },
   { scene: (d: number) => <GlowPhone rec="rec-portfolio.mp4" src={[0.5, 6]} dur={d} badge="LIVE · MY PORTFOLIO" /> },
-  { scene: (d: number) => <GlowPhone rec="rec-portfolio.mp4" src={[6, 12]} dur={d} badge="LIVE · MY PORTFOLIO" url="Free guide to build yours" /> },
+  { scene: (d: number) => <GlowPhone rec="rec-portfolio.mp4" src={[6, 12]} dur={d} badge="LIVE · MY PORTFOLIO" url="Step-by-step guide" /> },
   { scene: () => <FileToSite /> },
-  { scene: () => <BigNumber n="6" label="ready prompts" chips={["Claude", "ChatGPT", "Gemini"]} /> },
-  { scene: (d: number) => <GlowPhone rec="rec-portfolio.mp4" src={[12, 22]} dur={d} badge="3D PORTFOLIO WEBSITE" /> },
-  { scene: () => <BrowserLink text="yourname.vercel.app" chips={["Free hosting", "Your own link"]} /> },
-  { scene: (d: number) => <GlowPhone rec="rec-guide.mp4" src={[0, 10]} dur={d} badge="FREE WITH AN ACCOUNT" url="starxmarketing.com/portfolio-guide" /> },
-  { scene: () => <CtaColor word="PORTFOLIO" sub="and I'll send you the free guide" /> },
+  { scene: () => <BigNumber n="AI" label="ready prompts" chips={["Claude", "ChatGPT", "Gemini"]} /> },
+  { scene: () => <BigNumber n="3" label="steps free" chips={["Your content", "Design brief"]} /> },
+  { scene: () => <BrowserLink text="yourname.vercel.app" chips={["Pro steps", "Your own link"]} /> },
+  { scene: (d: number) => <GlowPhone rec="rec-guide.mp4" src={[0, 10]} dur={d} badge="BUILD WITH AI" url="starxmarketing.com/solutions/portfolio" /> },
+  { scene: () => <CtaColor word="PORTFOLIO" sub="and I'll send you the guide" /> },
 ];
 
 const TAIL = 1.4;
