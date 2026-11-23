@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const today = new Date("2026-11-11");
   return [
     { url: profile.site, lastModified: new Date("2026-11-20"), changeFrequency: "weekly", priority: 1 },
+    { url: `${profile.site}/website-development`, lastModified: new Date("2026-11-23"), changeFrequency: "monthly", priority: 1 },
     { url: `${profile.site}/plan`, lastModified: new Date("2026-11-21"), changeFrequency: "monthly", priority: 0.9 },
     { url: `${profile.site}/solutions`, lastModified: new Date("2026-11-21"), changeFrequency: "monthly", priority: 0.9 },
     ...solutions.map((x) => ({ url: `${profile.site}/solutions/${x.slug}`, lastModified: new Date("2026-11-21"), changeFrequency: "monthly" as const, priority: 0.8, images: [img(x.cover)] })),

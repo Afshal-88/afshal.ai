@@ -20,7 +20,8 @@ function AccountLink() {
 }
 
 const links = [
-  { href: "/#services", label: "Services" },
+  { href: "/website-development", label: "Website development" },
+  { href: "/#services", label: "All services" },
   { href: "/ai-solutions", label: "AI solutions for business" },
   { href: "/plan", label: "Get your marketing plan" },
   { href: "/solutions", label: "Build with AI" },

@@ -10,7 +10,10 @@ import WebsiteCheck from "@/components/sections/WebsiteCheck";
 import Contact from "@/components/sections/Contact";
 import HeroX, { FlatX } from "@/components/starx/HeroX";
 import ServiceGrid from "@/components/starx/ServiceGrid";
-import WorkShowcase from "@/components/starx/WorkShowcase";
+import SiteStack from "@/components/web/SiteStack";
+import SiteIndex from "@/components/web/SiteIndex";
+import WebServices from "@/components/web/WebServices";
+import { allSites, featuredSites } from "@/data/web";
 import DesignGallery from "@/components/starx/DesignGallery";
 import InstagramFeed from "@/components/starx/InstagramFeed";
 import OpeningBanner from "@/components/starx/OpeningBanner";
@@ -81,14 +84,14 @@ export default function StarXHome() {
         <section id="intro" className="relative scroll-mt-0 overflow-hidden px-5 pb-10 pt-24 md:px-10 md:pb-16 md:pt-28">
           <div className="grid items-center gap-8 lg:grid-cols-12">
             <div className="lg:col-span-7">
-              <SplitLines as="h1" className="display text-[12vw] leading-[0.98] md:text-[5.6vw]" lines={["Branding, websites,", "marketing and", <span key="a" className="text-accent">AI automation.</span>]} />
+              <SplitLines as="h1" className="display text-[12vw] leading-[0.98] md:text-[5.6vw]" lines={["Websites with", "motion, built", <span key="a" className="text-accent">to bring customers.</span>]} />
               <FadeUp delay={0.3}>
-                <p className="mt-6 max-w-xl text-lg leading-relaxed text-mute md:text-xl">One team for your brand, website and marketing, led by Afshal Amir.</p>
+                <p className="mt-6 max-w-xl text-lg leading-relaxed text-mute md:text-xl">We design and build fast, animated websites and Shopify stores, then market them. Led by Afshal Amir.</p>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <Magnetic>
                     <ContactButton className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-4 text-sm font-semibold text-[#111] transition-transform active:scale-[0.97]">Start a project <Icon name="ArrowRight" className="h-4 w-4" /></ContactButton>
                   </Magnetic>
-                  <a href="#services" className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-4 text-sm font-medium transition-colors hover:border-white/60">Our services</a>
+                  <a href="#websites" className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-4 text-sm font-medium transition-colors hover:border-white/60">See our websites</a>
                   <Link href="/portfolio" className="inline-flex items-center gap-2 rounded-full px-4 py-4 text-sm font-medium text-mute transition-colors hover:text-ink">See Afshal&apos;s portfolio <Icon name="ArrowUpRight" className="h-4 w-4" /></Link>
                 </div>
               </FadeUp>
@@ -107,6 +110,37 @@ export default function StarXHome() {
             ))}
           </Marquee>
         </div>
+
+        <section id="websites" className="scroll-mt-20 px-5 pt-16 md:px-10 md:pt-24">
+          <div className="grid gap-6 md:grid-cols-12 md:items-end">
+            <div className="md:col-span-8">
+              <p className="label text-accent">Website development</p>
+              <SplitLines className="display mt-3 text-[13vw] leading-[0.92] md:text-[7vw]" lines={["Selected", "websites"]} />
+            </div>
+            <p className="text-lg text-mute md:col-span-4">Built by Afshal Amir and the Star X team. Scroll through, tap one to open it.</p>
+          </div>
+          <div className="mt-6"><SiteStack sites={featuredSites} /></div>
+        </section>
+
+        <section id="all-websites" className="px-5 pb-16 pt-8 md:px-10 md:pb-24">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <h2 className="display text-4xl md:text-6xl">All work</h2>
+            <p className="label text-dim">{allSites.length} projects</p>
+          </div>
+          <div className="mt-8"><SiteIndex items={allSites} /></div>
+        </section>
+
+        <section id="web-development" className="relative scroll-mt-20 overflow-hidden px-5 pb-16 md:px-10 md:pb-24">
+          <StarField density={0.5} />
+          <div className="relative grid gap-6 md:grid-cols-12 md:items-end">
+            <SplitLines className="display text-4xl md:col-span-7 md:text-6xl" lines={["What we build"]} />
+            <div className="flex flex-wrap gap-3 md:col-span-5 md:justify-end">
+              <Link href="/plan" className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-4 text-sm font-semibold text-[#111]">Get a website plan <Icon name="ArrowRight" className="h-4 w-4" /></Link>
+              <ContactButton topic="Website Development" className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-4 text-sm font-medium hover:border-white/60">Talk to us</ContactButton>
+            </div>
+          </div>
+          <div className="relative mt-10"><WebServices /></div>
+        </section>
 
         <section id="plan" className="relative scroll-mt-20 overflow-hidden px-5 pt-16 md:px-10 md:pt-24">
           <div className="relative grid gap-8 overflow-hidden rounded-[32px] border border-line bg-[#07070b] p-6 md:p-12 lg:grid-cols-12 lg:items-center">
@@ -139,18 +173,6 @@ export default function StarXHome() {
             <p className="text-lg text-mute md:col-span-5">Ten services. Start with one, add more later.</p>
           </div>
           <div className="mt-10"><ServiceGrid items={starxServices} /></div>
-        </section>
-
-        <section id="work" className="scroll-mt-20 px-5 pb-16 md:px-10 md:pb-24">
-          <div className="grid gap-6 md:grid-cols-12 md:items-end">
-            <SplitLines className="display text-4xl md:col-span-7 md:text-6xl" lines={["Recent websites"]} />
-            <p className="text-lg text-mute md:col-span-5">Built by Afshal Amir and the Star X team.</p>
-          </div>
-          <div className="mt-10"><WorkShowcase /></div>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/portfolio#websites" className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-4 text-sm font-semibold text-bg transition-colors hover:bg-accent hover:text-[#111]">See all websites <Icon name="ArrowRight" className="h-4 w-4" /></Link>
-            <ContactButton topic="Website Development" className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-4 text-sm font-medium transition-colors hover:border-white/60">I need a website</ContactButton>
-          </div>
         </section>
 
         <section aria-label="Start your plan" className="relative mx-5 mb-16 overflow-hidden rounded-[32px] md:mx-10 md:mb-24">
