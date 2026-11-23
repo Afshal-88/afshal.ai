@@ -70,7 +70,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="label mt-12 flex flex-wrap justify-between gap-2 border-t border-line py-5">
-        <span>© 2026 Muhammad Afshal Amir · Space photos: NASA, ESA, CSA, STScI</span>
+        <span>© 2026 Muhammad Afshal Amir · Space photos: NASA, ESA, CSA, STScI · Illustrations made with AI (Magnific)</span>
         <span>{profile.location}</span>
       </div>
     </footer>

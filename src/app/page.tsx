@@ -8,7 +8,7 @@ import { FadeUp, SplitLines } from "@/components/Reveal";
 import { ContactButton } from "@/components/ui/ContactModal";
 import WebsiteCheck from "@/components/sections/WebsiteCheck";
 import Contact from "@/components/sections/Contact";
-import HeroX, { FlatX } from "@/components/starx/HeroX";
+import HeroVisual from "@/components/web/HeroVisual";
 import ServiceGrid from "@/components/starx/ServiceGrid";
 import SiteStack from "@/components/web/SiteStack";
 import SiteIndex from "@/components/web/SiteIndex";
@@ -96,7 +96,7 @@ export default function StarXHome() {
                 </div>
               </FadeUp>
             </div>
-            <div className="mx-auto w-full max-w-[560px] lg:col-span-5"><HeroX /></div>
+            <div className="lg:col-span-5"><HeroVisual /></div>
           </div>
         </section>
 
@@ -105,7 +105,7 @@ export default function StarXHome() {
             {starxServices.map((s) => (
               <span key={s.title} className="flex items-center gap-10 whitespace-nowrap">
                 <span className="display text-2xl md:text-4xl">{s.title}</span>
-                <FlatX className="h-6 w-auto md:h-8" />
+                <svg aria-hidden viewBox="0 0 24 24" className="h-5 w-5 shrink-0 fill-accent md:h-7 md:w-7"><path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0Z" /></svg>
               </span>
             ))}
           </Marquee>
@@ -140,6 +140,23 @@ export default function StarXHome() {
             </div>
           </div>
           <div className="relative mt-10"><WebServices /></div>
+        </section>
+
+        <section aria-label="One team" className="px-5 pb-16 md:px-10 md:pb-24">
+          <div className="group relative overflow-hidden rounded-[32px] border border-line">
+            <img src="/visuals/agency-team.webp" alt="A digital agency team at work (AI-generated illustration)" width={2000} height={994} loading="lazy" className="h-[420px] w-full object-cover transition-transform duration-[1.6s] ease-[cubic-bezier(.23,1,.32,1)] group-hover:scale-[1.04] md:h-[520px]" />
+            <span aria-hidden className="absolute inset-0 bg-[linear-gradient(to_top,rgba(10,10,10,.92),rgba(10,10,10,.35)_55%,rgba(10,10,10,.1))]" />
+            <div className="absolute inset-x-0 bottom-0 grid gap-6 p-6 md:grid-cols-12 md:items-end md:p-12">
+              <div className="md:col-span-8">
+                <p className="label text-accent">Websites · Marketing · Software</p>
+                <h2 className="display mt-3 text-4xl leading-[0.95] md:text-6xl">One team from the first page to the first sale.</h2>
+              </div>
+              <div className="flex flex-wrap gap-3 md:col-span-4 md:justify-end">
+                <Link href="/plan" className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-4 text-sm font-semibold text-[#111]">Get your plan <Icon name="ArrowRight" className="h-4 w-4" /></Link>
+                <ContactButton className="inline-flex items-center gap-2 rounded-full border border-white/40 px-6 py-4 text-sm font-medium text-white hover:border-white">Talk to us</ContactButton>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section id="plan" className="relative scroll-mt-20 overflow-hidden px-5 pt-16 md:px-10 md:pt-24">
