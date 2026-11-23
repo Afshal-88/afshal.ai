@@ -4,6 +4,7 @@ import timings from "./timings.json";
 import { AbsoluteFill as AF } from "remotion";
 import { BigNumber, BrowserLink, ColorReel, CtaColor, FileToSite, Glitch, GlowPhone } from "./Color";
 import { WebReel, webFrames } from "./Web3D";
+import { OneStudioReel, oneStudioFrames } from "./OneStudio";
 import { ScreenReel, screenFrames, type ScreenDef } from "./Screen";
 import { Backdrop, C, Caption, Chips, Cta, FPS, Headline, Phone, Report, Sheet, Statement, TopCard, fontCss } from "./kit";
 
@@ -122,6 +123,8 @@ export const Root: React.FC = () => (
     {[REEL03, REEL04].map((r) => (
       <Composition key={r.id} id={r.id} component={() => <ReelView r={r} />} durationInFrames={frames(r)} fps={FPS} width={1080} height={1920} />
     ))}
+    <Composition id="Reel09" component={OneStudioReel} durationInFrames={oneStudioFrames} fps={FPS} width={1080} height={1920} />
+    <Composition id="Reel09Silent" component={() => <OneStudioReel withAudio={false} />} durationInFrames={oneStudioFrames} fps={FPS} width={1080} height={1920} />
     <Composition id="Reel08" component={WebReel} durationInFrames={webFrames} fps={FPS} width={1080} height={1920} />
     <Composition id="Reel07" component={() => <ColorReel t={R07T} words={timings.r07words} vo="vo07.wav" beats={reel07Beats} handle="@STARXMARKETING" />} durationInFrames={Math.round((R07T.end + 1.6) * FPS)} fps={FPS} width={1080} height={1920} />
     {[REEL05, REEL06].map((r) => (
