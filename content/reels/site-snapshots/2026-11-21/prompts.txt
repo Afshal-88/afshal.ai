@@ -1,0 +1,583 @@
+150 AI Prompts for Reels, Content, Ads & Business — Afshal.ai
+Skip to content
+Portfolio
+Let's talk
+Menu
+Home
+/ Prompt library
+AI prompt library
+150
+prompts I use for client work:
+40
+open to everyone,
+60
+more with a free account and
+50
+advanced ones in Pro. Copy one, replace the [BRACKETS] and paste it into ChatGPT, Claude or Gemini.
+Free account:
+unlock 60 more prompts. No payment needed.
+Sign up free
+Search prompts
+All
+Reels & short video
+AI video prompts
+AI images & product photos
+Hooks & captions
+Content planning
+Ads
+SEO & websites
+Business & sales
+Freelancing & career
+Urdu & Roman Urdu content
+Reels & short video
+Scripts, shot lists and edits for Instagram Reels, TikTok and YouTube Shorts.
+30-second reel script
+Write a 30-second reel script for [BUSINESS] selling [PRODUCT] to [AUDIENCE]. Give a 2-second hook, three fast beats with on-screen text for each, and one call to action. Keep every line under 10 words.
+Copy prompt
+10 reel ideas from one product
+Give me 10 reel ideas for [PRODUCT]. For each: the hook line, the format (talking head, demo, before/after, POV, voiceover), and why someone would watch to the end.
+Copy prompt
+Shot list for a phone shoot
+Turn this script into a shot list I can film alone on a phone: [SCRIPT]. For each shot give framing, movement, duration in seconds and what is said or shown.
+Copy prompt
+Faceless reel script
+Write a faceless reel for [NICHE] using only b-roll, text on screen and voiceover. 35 seconds. List the b-roll clip for each line and the exact text overlay.
+Copy prompt
+Before / after reel
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Turn a long video into shorts
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Trend adaptation
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Voiceover script with pauses
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Reel series plan
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Fix my reel
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+30 reels in one sitting
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Viral reel reverse-engineer
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Retention editor
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Series that sells
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Client reel package brief
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+AI video prompts
+Text-to-video prompts for tools such as Kling, Runway, Veo and Luma.
+Cinematic product shot
+Slow 360-degree orbit around a [PRODUCT] on a [SURFACE], soft studio lighting, shallow depth of field, subtle reflections, 4K, commercial look, no text, 5 seconds.
+Copy prompt
+Lifestyle b-roll
+A [PERSON DESCRIPTION] using [PRODUCT] in a [LOCATION], natural morning light, handheld camera with slight movement, warm colour grade, realistic skin, 6 seconds.
+Copy prompt
+Food close-up
+Macro shot of [DISH] being [ACTION, e.g. drizzled with sauce], steam rising, dark background, side light, slow motion, appetising commercial style, 5 seconds.
+Copy prompt
+Image-to-video motion
+Animate this image: gentle camera push-in, hair and fabric moving slightly in the wind, background stays stable, no face distortion, natural motion, 4 seconds.
+Copy prompt
+Real estate fly-through
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Logo reveal
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Fashion walk
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Storyboard to prompts
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Keep a character consistent
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Fix a bad AI video
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+30-second AI ad, shot by shot
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Consistent AI presenter
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Product film from one photo
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+AI b-roll library
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Prompt debugger
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+AI images & product photos
+Prompts for product shots, ad creatives and brand visuals.
+Studio product photo
+Product photo of [PRODUCT] on a [COLOUR] seamless background, softbox lighting from the left, gentle shadow, sharp focus, e-commerce catalogue style, square format.
+Copy prompt
+Lifestyle product scene
+[PRODUCT] placed on a [SURFACE] in a [SETTING], props: [PROPS], natural window light, muted colour palette, magazine lifestyle photography, space at the top for text.
+Copy prompt
+Ad creative with text space
+Vertical 4:5 ad image for [OFFER]. Product on the lower right, clean [COLOUR] background, strong contrast, empty space top-left for a headline. No text in the image.
+Copy prompt
+Brand mood board
+Create a mood board for a [BRAND TYPE] brand that feels [3 ADJECTIVES]. Include colour swatches, textures, a typography sample and 3 photography styles in one grid.
+Copy prompt
+Logo concepts
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Social post background
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Food menu photo
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Packaging mockup
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Edit an existing photo
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Thumbnail
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Full product photoshoot set
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Brand visual system
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Ad creative variations
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Carousel art direction
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Consistent brand model
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Hooks & captions
+First lines that stop the scroll and captions that sound like you.
+20 hooks for one topic
+Write 20 hooks for a video about [TOPIC] for [AUDIENCE]. Mix question, bold claim, mistake, number and story hooks. Maximum 9 words each.
+Copy prompt
+Caption in my brand voice
+Here are 3 of my past captions: [PASTE]. Learn the voice. Now write a caption about [TOPIC] in the same voice, under 80 words, with one clear call to action.
+Copy prompt
+Weak hook to strong hook
+My hook is: '[HOOK]'. Give 5 stronger versions and explain in one line each what makes it stronger.
+Copy prompt
+Carousel copy
+Write a 7-slide carousel about [TOPIC]. Slide 1 is the hook, slides 2–6 one idea each in under 20 words, slide 7 a call to action. Add a caption.
+Copy prompt
+Caption for a product launch
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Hashtag set
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Story sequence
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+LinkedIn post
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Reply to comments
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Call-to-action lines
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Hook bank for a month
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Brand voice guide
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Caption A/B set
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Comment-to-DM funnel
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Story selling week
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Content planning
+Calendars, pillars and repurposing plans.
+30-day content calendar
+Create a 30-day content calendar for [BUSINESS] on [PLATFORMS]. Columns: date, format, topic, hook, call to action. Balance education, proof, behind-the-scenes and offers.
+Copy prompt
+Content pillars
+Define 4 content pillars for [BUSINESS] targeting [AUDIENCE]. For each give the purpose, 5 post ideas and how often to post it.
+Copy prompt
+One idea, seven formats
+Take this idea: [IDEA]. Turn it into a reel, a carousel, a story, a LinkedIn post, a tweet, a WhatsApp broadcast and an email subject line.
+Copy prompt
+Weekly batch plan
+I can film for 2 hours on Sunday. Plan 7 videos for [NICHE] I can shoot in one session: order of filming, outfit or location changes and props.
+Copy prompt
+Audience research
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Competitor content review
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Seasonal campaign
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Content audit
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Launch content plan
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Posting schedule
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+90-day content strategy
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Content operating system
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Repurposing machine
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Monthly review
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Launch runway
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Ads
+Meta, Google and TikTok ad copy, angles and testing plans.
+5 ad angles
+Give 5 different ad angles for [PRODUCT] aimed at [AUDIENCE]: problem, desire, social proof, comparison and offer. One primary text and headline each.
+Copy prompt
+Meta ad copy set
+Write 3 primary texts (short, medium, long), 5 headlines under 40 characters and 3 descriptions for a Meta ad selling [PRODUCT] at [PRICE].
+Copy prompt
+UGC ad script
+Write a 30-second UGC-style ad script for [PRODUCT]: hook, problem, discovery, demo, result, call to action. Natural spoken language.
+Copy prompt
+Google Search ads
+Write a responsive search ad for [SERVICE] in [CITY]: 15 headlines (max 30 characters) and 4 descriptions (max 90 characters). Include the keyword [KEYWORD].
+Copy prompt
+Audience ideas
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Offer builder
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Ad teardown
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Testing plan
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Landing page match
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Retargeting messages
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Full-funnel campaign
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Creative testing matrix
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Landing page from an ad
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Account audit
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Offer stack
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+SEO & websites
+Keywords, page copy and fixes for search and AI answers.
+Keyword list
+List 30 keywords a customer would search to find a [BUSINESS] in [CITY]. Group by intent: ready to buy, comparing, learning.
+Copy prompt
+Home page copy
+Write home page copy for [BUSINESS]: headline, sub-headline, 3 benefits, how it works in 3 steps, FAQ with 5 questions and a call to action.
+Copy prompt
+Title and meta description
+Write 5 title tags (under 60 characters) and 5 meta descriptions (under 155) for a page about [TOPIC] targeting [KEYWORD].
+Copy prompt
+Blog outline
+Outline a blog post targeting '[KEYWORD]': H1, H2s, H3s, questions to answer and what to link to internally. Aim to be more useful than page-one results.
+Copy prompt
+Product description
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Google Business Profile
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+FAQ for AI answers
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Website review
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Schema markup
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Internal linking
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Topic cluster plan
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Local SEO plan
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+GEO: be quoted by AI
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Service page that converts
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Website teardown
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Business & sales
+Offers, WhatsApp replies, proposals and customer follow-ups.
+WhatsApp sales replies
+Write WhatsApp replies for a [BUSINESS] to these common messages: price?, delivery?, discount?, is it original?, I'll think about it. Short, polite, move toward the order.
+Copy prompt
+Follow-up sequence
+Write a 4-message follow-up for leads who asked about [SERVICE] and went quiet: day 1, day 3, day 7, day 14. Helpful, never pushy.
+Copy prompt
+Chatbot script
+Design a chatbot flow for a [BUSINESS]: greeting, 4 qualifying questions, answers to top 5 FAQs and the handover to a human with collected details.
+Copy prompt
+Pricing packages
+Create 3 packages (starter, standard, premium) for [SERVICE] with what's included, who each is for and a suggested price logic.
+Copy prompt
+Customer persona
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Review request
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Competitor comparison
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Monthly report summary
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Complaint reply
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Business idea check
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+AI chatbot knowledge base
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Sales call script
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+WhatsApp sales system
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Business growth report
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Standard operating procedure
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Freelancing & career
+Proposals, profiles, CVs and client messages.
+Proposal that gets replies
+Write a proposal for this job post: [JOB]. My skills: [SKILLS]. Open with their problem, give a 3-step plan, one relevant result and a question. Under 150 words.
+Copy prompt
+Profile bio
+Write an Upwork/Fiverr profile bio for a [ROLE] with [YEARS] years' experience in [SKILLS]. Lead with the client's result, not my history.
+Copy prompt
+CV rewrite
+Rewrite these CV bullet points to show results with numbers where I give them: [BULLETS]. Target role: [ROLE]. Do not invent numbers.
+Copy prompt
+Cold outreach message
+Write a 60-word message to the owner of [BUSINESS] offering [SERVICE]. Mention one specific thing I noticed: [OBSERVATION]. End with an easy yes/no question.
+Copy prompt
+Interview practice
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Rate calculator
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Portfolio case study
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Scope of work
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Learning plan
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Client update email
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Niche and offer finder
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Outreach campaign
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Proposal document
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Client onboarding kit
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Raise my rates
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Urdu & Roman Urdu content
+Prompts that produce natural Urdu, not word-for-word translation.
+Natural Roman Urdu caption
+Write a caption in natural Roman Urdu, the way people in Lahore actually text, about [TOPIC] for [BUSINESS]. No formal or bookish words. Under 60 words.
+Copy prompt
+Urdu reel script
+[TOPIC] par 30 second ki reel ka script Roman Urdu mein likhein. Pehle 2 second ka hook, phir 3 points, aakhir mein ek call to action. Har line 10 lafzon se kam.
+Copy prompt
+English to conversational Urdu
+Translate this into conversational Urdu script (not literal): [TEXT]. Keep brand and tech words in English where Pakistanis normally do.
+Copy prompt
+Urdu hooks
+[TOPIC] ke liye 15 hooks Roman Urdu mein dein. Sawal, ghalti, number aur kahani walay hooks mix karein. Zyada se zyada 9 lafz.
+Copy prompt
+WhatsApp broadcast
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Urdu voiceover
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Bilingual carousel
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Customer replies in Urdu
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Eid / occasion greeting
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Check my Urdu
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Free with an account
+Urdu brand voice
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+30 din ka Urdu content plan
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Urdu sales script
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Urdu ad set
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Urdu course outline
+PRO
+Write a detailed, ready-to-use prompt for this exact job, with the brackets you fill in and the output format you get back.
+Unlock with Pro
+Education & certifications
+Software Engineer
+BS Software Engineering · Superior University, Lahore
+Digital Marketing
+Lahore University of Management Sciences (LUMS)
+Google certified
+Google certification
+AWS Certified
+AI Practitioner · Foundational
+Star X Marketing — digital marketing agency in Lahore, Pakistan, led by Afshal Amir, digital marketer and web developer.
+afshalamir8@gmail.com
+0342 0757848
+Services
+AI solutions
+About Star X
+Afshal's portfolio
+Websites
+Portfolio guide
+Free AI tools
+AI content generator
+Prompt library
+AI tools
+Pricing
+My account
+Website check
+Contact
+Portfolio PDF
+Star X Marketing ↗
+Back to top ↑
+© 2026 Muhammad Afshal Amir
+Lahore, Pakistan
+Chat on WhatsApp

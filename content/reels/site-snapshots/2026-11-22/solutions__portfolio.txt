@@ -1,0 +1,135 @@
+3D portfolio website with AI — step-by-step prompts — Star X Marketing
+Skip to content
+Portfolio
+Let's talk
+Menu
+Home
+/
+Build with AI
+/
+3D portfolio website
+3D portfolio website
+A live portfolio on your own link, with a 3D hero, project popups and a CV download.
+Claude
+ChatGPT
+Gemini
+Vercel
+Steps 1–
+3
+free ·
+4
+more with Pro
+01
+Collect your material
+Make one folder on your computer called portfolio. Everything the AI needs goes in it.
+Pick only your best work. Four to six strong projects beat twenty average ones.
+Your portfolio as a PDF, or a folder of project images and screenshots
+Your resume / CV as a PDF
+One clear photo of yourself (face visible, plain background)
+Links: LinkedIn, Instagram, Behance, GitHub, anything you use
+For each project: name, client or company, year, what you did, and the result (only real results)
+Your email and WhatsApp number for the contact section
+02
+Turn your files into clean content
+Open Claude, ChatGPT or Gemini. Upload your portfolio PDF (or the images) and your resume, then paste this prompt.
+Read what comes back. Fill every [MISSING] yourself and answer the questions at the end. Save the final text; you'll paste it into the next prompt.
+Prompt 1 — Extract my content
+Claude, ChatGPT or Gemini, with your PDF and resume attached
+Copy prompt
+I'm attaching my portfolio (PDF or images) and my resume. I want to turn them into a personal portfolio website.
+Read both files carefully and give me back ONE organised content document in Markdown with these parts:
+1. About me — full name, current role, city and country, and a 2–3 sentence introduction in first person, plain and specific (no slogans).
+2. Skills — grouped, for example: Design, Marketing, Development, Tools.
+3. Experience — for each job: company, role, start and end dates, and 3 short bullet points of what I actually did.
+4. Education and certificates — with dates and institutions.
+5. Projects — for each project: title, client or context, year, my role, what I did, the result, and which pages or images from my portfolio belong to it (give each image a file name like project-1-a.jpg).
+6. Contact — email, phone/WhatsApp, LinkedIn and every other link in my files.
+Rules:
+- Use only facts that appear in my files. Do not invent clients, numbers, awards, testimonials or results.
+- If something is missing, write [MISSING: what is needed] so I can fill it in.
+- Keep my wording where it is good; fix spelling and grammar.
+- At the end, list up to 8 questions I should answer to make the portfolio stronger.
+03
+Choose your look
+Decide how the site should feel before any code. The AI turns your taste into a clear design brief.
+Design brief
+Claude, ChatGPT or Gemini, in the same chat as step 2
+Copy prompt
+Using my content above, write a one-page design brief for my portfolio website.
+Ask me 5 short questions first about: the feeling I want (e.g. bold, calm, premium, playful), colours I like, 2–3 websites I admire, whether I want a dark or light site, and what the 3D element in the hero should be.
+Then give me:
+1. Colour palette: background, text, one accent colour (hex codes).
+2. Fonts: one display font for headings and one for text (Google Fonts).
+3. The 3D hero idea in one sentence.
+4. Section order with one line about each.
+5. Three words the site must feel like, and three it must never feel like.
+Keep it short. I'll paste this brief into the build prompt.
+More solutions
+Business website
+Mobile app
+Video editing with AI
+Copywriting that sells
+Brand and logo
+Education & certifications
+Software Engineer
+BS Software Engineering · Superior University, Lahore
+Digital Marketing
+Lahore University of Management Sciences (LUMS)
+Google certified
+Google certification
+AWS Certified
+AI Practitioner · Foundational
+Star X Marketing — digital marketing agency in Lahore, Pakistan, led by Afshal Amir, digital marketer and web developer.
+afshalamir8@gmail.com
+0342 0757848
+Services
+AI solutions
+About Star X
+Afshal's portfolio
+Websites
+Marketing plan
+Build with AI
+Free AI tools
+AI content generator
+Prompt library
+AI tools
+Pricing
+My account
+Website check
+Contact
+Portfolio PDF
+Star X Marketing ↗
+Back to top ↑
+© 2026 Muhammad Afshal Amir · Space photos: NASA, ESA, CSA, STScI
+Lahore, Pakistan
+Chat on WhatsApp
+Step
+4
+· 2 prompts
+Build the 3D portfolio
+Choose one of the two prompts below. Prompt 2A builds a proper Next.js site (best if you will keep improving it). Prompt 2B builds a single HTML file (easiest if you have never coded).
+Step
+5
+· 1 prompt
+Check it and fix it
+Run the site on your computer (or open index.html). Look at it on your phone too. Then ask the AI to review its own work with this prompt.
+Step
+6
+· 1 prompt
+Put it live on Vercel
+This is how the Star X website itself is hosted: code on GitHub, live on Vercel, free to start.
+Step
+7
+· 1 prompt
+Share it
+Put the link in your Instagram bio, LinkedIn Featured section, email signature and the top of your CV. Then use this prompt to announce it.
+Unlock the last
+4
+steps
+These are the steps that finish the job:
+Build the 3D portfolio, Check it and fix it, Put it live on Vercel, Share it
+.
+Pro opens every step in every solution, plus the advanced prompt library. One payment.
+Create account and get Pro
+Sign in
+Or have Star X do it for you

@@ -1,0 +1,9 @@
+Stop sending a PDF. Send a 3D portfolio instead.
+This is mine. A 3D hero, animations, real work.
+Now there's a step-by-step guide to build yours with AI.
+Give the AI your portfolio PDF and your CV.
+Ready prompts for Claude, ChatGPT or Gemini.
+The first 3 steps are free. Your content and your design brief.
+The rest is in Pro, and takes you live on Vercel with your own link.
+Find it on starxmarketing.com, under Build with AI.
+Comment PORTFOLIO, and stop sending a PDF.

@@ -1,0 +1,115 @@
+Mobile app with AI — step-by-step prompts — Star X Marketing
+Skip to content
+Portfolio
+Let's talk
+Menu
+Home
+/
+Build with AI
+/
+Mobile app
+Mobile app
+A working Android and iPhone app you can test on your own phone, ready to publish.
+Claude
+Expo
+React Native
+Supabase
+Steps 1–
+3
+free ·
+4
+more with Pro
+01
+Shape the idea
+Cut the idea down to the smallest app people would actually use.
+App idea to MVP
+Any AI
+Copy prompt
+My app idea: [IDEA]. Users: [WHO]. Problem it solves: [PROBLEM].
+1. Ask me 5 questions to sharpen the idea.
+2. Then define the first version (MVP): the one main job, max 5 features, and what to leave out for later.
+3. List 3 similar apps and what my app must do better.
+4. Name the riskiest assumption and a cheap way to test it this week.
+02
+Map the screens
+Every screen and how users move between them, before any design.
+Screens and flow
+Same chat
+Copy prompt
+For the MVP above, list every screen. For each: its name, what the user sees, what they can do, and where each button goes. Then write the main user journey from first open to the "aha" moment in 6–8 steps. Mark which screens need login and which data each screen reads or saves.
+03
+Design the screens
+A design system and screen-by-screen descriptions you can build or mock up.
+App design
+Same chat, or a design AI
+Copy prompt
+Create a simple design system for my app: colours (hex), font, spacing scale, button styles, input style, card style, icons set. Then describe each screen from the list above in detail (layout top to bottom, components, empty state, loading state, error state). Keep it clean, thumb-friendly and readable at 360px width.
+More solutions
+3D portfolio website
+Business website
+Video editing with AI
+Copywriting that sells
+Brand and logo
+Education & certifications
+Software Engineer
+BS Software Engineering · Superior University, Lahore
+Digital Marketing
+Lahore University of Management Sciences (LUMS)
+Google certified
+Google certification
+AWS Certified
+AI Practitioner · Foundational
+Star X Marketing — digital marketing agency in Lahore, Pakistan, led by Afshal Amir, digital marketer and web developer.
+afshalamir8@gmail.com
+0342 0757848
+Services
+AI solutions
+About Star X
+Afshal's portfolio
+Websites
+Marketing plan
+Build with AI
+Free AI tools
+AI content generator
+Prompt library
+AI tools
+Pricing
+My account
+Website check
+Contact
+Portfolio PDF
+Star X Marketing ↗
+Back to top ↑
+© 2026 Muhammad Afshal Amir · Space photos: NASA, ESA, CSA, STScI
+Lahore, Pakistan
+Chat on WhatsApp
+Step
+4
+· 1 prompt
+Build the app
+One prompt for a complete Expo (React Native) project.
+Step
+5
+· 1 prompt
+Add login and data
+Real accounts and a database, without writing a server.
+Step
+6
+· 1 prompt
+Test and fix
+Test on real phones and let the AI fix what breaks.
+Step
+7
+· 1 prompt
+Publish to the stores
+Store listing, screenshots and the publish steps.
+Unlock the last
+4
+steps
+These are the steps that finish the job:
+Build the app, Add login and data, Test and fix, Publish to the stores
+.
+Pro opens every step in every solution, plus the advanced prompt library. One payment.
+Create account and get Pro
+Sign in
+Or have Star X do it for you
