@@ -1,0 +1,113 @@
+Video editing with AI with AI — step-by-step prompts — Star X Marketing
+Skip to content
+Portfolio
+Let's talk
+Menu
+Home
+/
+Build with AI
+/
+Video editing with AI
+Video editing with AI
+A finished reel with a strong hook, captions, b-roll, music and a cover, ready to post.
+CapCut
+ChatGPT
+Claude
+Kling or Runway
+Steps 1–
+3
+free ·
+4
+more with Pro
+01
+Plan the edit
+Turn your script or raw clip into a cut-by-cut edit plan.
+Edit plan
+Any AI
+Copy prompt
+Here is my script or the transcript of my raw video: [PASTE]. Target: [PLATFORM], [LENGTH] seconds, for [AUDIENCE].
+Make an edit plan as a table: time, what is said, what is on screen (A-roll, b-roll, text, zoom), and the reason. Cut anything that doesn't move the story. Aim for a visual change every 2–3 seconds.
+02
+Fix the first 3 seconds
+Most people decide in the first moment. Give them a reason to stay.
+Hook options
+Same chat
+Copy prompt
+Write 6 opening hooks for this video, each under 10 words, in different styles: question, bold claim, mistake, result first, curiosity, pattern interrupt. For each, describe the first frame on screen and the text overlay. Mark the 2 strongest and say why.
+03
+Captions that read well
+Captions keep silent viewers watching.
+Caption script
+Same chat
+Copy prompt
+Split my script into on-screen captions: max 4 words per line, one idea per caption, key words marked in CAPS for highlight colour. Add emoji only where they help meaning. Give me the list in order so I can paste it into CapCut auto-captions and fix the timing.
+More solutions
+3D portfolio website
+Business website
+Mobile app
+Copywriting that sells
+Brand and logo
+Education & certifications
+Software Engineer
+BS Software Engineering · Superior University, Lahore
+Digital Marketing
+Lahore University of Management Sciences (LUMS)
+Google certified
+Google certification
+AWS Certified
+AI Practitioner · Foundational
+Star X Marketing — digital marketing agency in Lahore, Pakistan, led by Afshal Amir, digital marketer and web developer.
+afshalamir8@gmail.com
+0342 0757848
+Website development
+Services
+AI solutions
+About Star X
+Afshal's portfolio
+Websites
+Marketing plan
+Build with AI
+Free AI tools
+AI content generator
+Prompt library
+AI tools
+Pricing
+My account
+Website check
+Contact
+Portfolio PDF
+Star X Marketing ↗
+Back to top ↑
+© 2026 Muhammad Afshal Amir · Space photos: NASA, ESA, CSA, STScI · Illustrations made with AI (Magnific)
+Lahore, Pakistan
+Chat on WhatsApp
+Step
+4
+· 1 prompt
+Edit in CapCut, step by step
+The exact edit sequence, with settings.
+Step
+5
+· 1 prompt
+AI b-roll and voiceover
+Fill gaps with AI clips and a clean voice.
+Step
+6
+· 1 prompt
+Sound design
+Sound is half the feeling of a reel.
+Step
+7
+· 1 prompt
+Export, cover and caption
+Settings and words that help the reel get found.
+Unlock the last
+4
+steps
+These are the steps that finish the job:
+Edit in CapCut, step by step, AI b-roll and voiceover, Sound design, Export, cover and caption
+.
+Pro opens every step in every solution, plus the advanced prompt library. One payment.
+Create account and get Pro
+Sign in
+Or have Star X do it for you
